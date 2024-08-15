@@ -7,15 +7,14 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color: hsl(220, 18%, 78%);
-  --bg-color-light: hsl(220, 18%, 86%);
-  --title-color: hsl(220, 8%, 10%);
-  --text-color: hsl(220, 4%, 32%);
-  --text-color-light: hsl(220, 4%, 55%);
-  --body-color: hsl(220, 18%, 99%);
-  --container-color: hsl(220, 18%, 97%);
-
+/*Color mode HSL(hue, saturation, lightness)*/
+--bg-color: hsl(30, 100%, 85%); /* Light background color */
+--bg-color-light: hsl(30, 100%, 90%); /* Lighter background color */
+--title-color: hsl(30, 100%, 20%); /* Darker title color */
+--text-color: hsl(30, 100%, 40%); /* Medium text color */
+--text-color-light: hsl(30, 100%, 55%); /* Lighter text color */
+--body-color: hsl(30, 100%, 95%); /* Very light body color */
+--container-color: hsl(30, 100%, 92%); /* Light container color */
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Lora', serif;
