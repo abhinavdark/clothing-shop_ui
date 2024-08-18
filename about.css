@@ -1,0 +1,142 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+--bg-color: hsl(30, 100%, 85%); /* Light background color */
+--bg-color-light: hsl(30, 100%, 90%); /* Lighter background color */
+--title-color: hsl(30, 100%, 20%); /* Darker title color */
+--text-color: hsl(30, 100%, 40%); /* Medium text color */
+--text-color-light: hsl(30, 100%, 55%); /* Lighter text color */
+--body-color: hsl(30, 100%, 95%); /* Very light body color */
+--container-color: hsl(30, 100%, 92%); /* Light container color */
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Lora', serif;
+
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1124px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* Base styles */
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: var(--biggest-font-size);
+  margin-bottom: 0.5rem;
+}
+
+/* Main content styles */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: var(--h1-font-size);
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
+  padding: 1rem;
+  text-align: center;
+  font-size: var(--small-font-size);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+
+  header {
+    padding: 1.5rem;
+  }
+
+  main {
+    margin: 1.5rem auto;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+}
