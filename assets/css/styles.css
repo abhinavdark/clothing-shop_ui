@@ -337,15 +337,23 @@ body.dark-theme {
 
 .features {
     margin: 2rem 0;
-    text-align: center;
+}
+
+.features__grid {
+    display: flex;
+    justify-content: space-around; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .feature {
-    margin: 1rem;
+    flex: 1; /* Allow features to grow */
+    max-width: 300px; /* Limit max width for each feature */
+    margin: 1rem; /* Space around each feature */
     padding: 1rem;
     border: 1px solid #e0e0e0; /* Light border */
     border-radius: 8px;
     transition: transform 0.3s;
+    text-align: center; /* Center text */
 }
 
 .feature:hover {
