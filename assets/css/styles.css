@@ -335,6 +335,38 @@ body.dark-theme {
   transform: translateX(.25rem);
 }
 
+.features {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.feature {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.feature__icon {
+    font-size: 2rem; /* Adjust icon size */
+    margin-bottom: 0.5rem;
+}
+
+.feature__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.feature__description {
+    font-size: 1rem;
+    color: #555; /* Darker gray for text */
+}
 /*=============== COLLECTION ===============*/
 .collection {
   background-color: var(--bg-color-light);
