@@ -7,72 +7,109 @@
   <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-   <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-                Couture Arangam.
-            </a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="ri-home-line"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#new" class="nav__link">
-                            <i class="ri-price-tag-3-line"></i>
-                            <span>New</span>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="https://checkout.couturearangam.shop/" class="nav__link">
-                            <i class="ri-compass-line"></i>
-                            <span>Collection</span>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="https://couturearangam.shop/about" class="nav__link">
-                            <i class="ri-t-shirt-line"></i>
-                            <span>About</span>
-                        </a>
-                    </li>
-
-                    <li class="nav__item dropdown">
-                        <a href="#" class="nav__link">
-                            <span>Men</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Shirts</a></li>
-                            <li><a href="#">Pants</a></li>
-                            <li><a href="#">Accessories</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav__item dropdown">
-                        <a href="#" class="nav__link">
-                            <span>Women</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Dresses</a></li>
-                            <li><a href="#">Tops</a></li>
-                            <li><a href="#">Accessories</a></li>
-                        </ul>
-                    </li>
-                </ul>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <i class="ri-planet-line"></i> Company
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
             </div>
 
-            <!-- Theme change button -->
-            <i class="ri-moon-line change-theme" id="theme-button"></i>
-        </nav>
-    </header>
-    <!--==================== HEADER ====================-->
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="#" class="nav__link">Home</a></li>
+
+                  <li><a href="#" class="nav__link">Company</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Analytics <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Overview
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Transactions
+                           </a>
+                        </li>
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class="ri-bar-chart-line"></i> Reports <i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> Documents
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Payments
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-refund-2-line"></i> Refunds
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <li><a href="#" class="nav__link">Products</a></li>
+
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-user-line"></i> Profiles
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Accounts
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Messages
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="#" class="nav__link">Contact</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
 
     <main>
         <section>
