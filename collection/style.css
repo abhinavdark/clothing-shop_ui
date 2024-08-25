@@ -54,6 +54,10 @@ body {
   background-color: #ddd;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
