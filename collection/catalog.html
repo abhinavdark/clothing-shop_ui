@@ -54,14 +54,16 @@
   </footer>
 
   <script>
-    const apiKey = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzN2Q0YmQzMDM1ZmUxMWU5YTgwM2FiN2VlYjNjY2M5NyIsImp0aSI6IjQzMjgzNmYxMWY4ZjA3NWMzMWY5ZjI1Y2FhNWJmZDM3ZDllMDZkOGI4OTQ3YTA2Nzk0YzMxYWU0N2Y1Y2M2MGEyYThhNGEyMDMxZTBjOGZhIiwiaWF0IjoxNzI0NTk2MzI4LjUzOTI5MiwibmJmIjoxNzI0NTk2MzI4LjUzOTI5NSwiZXhwIjoxNzU2MTMyMzI4LjUyMjQ4NCwic3ViIjoiMTkzNjUzMjIiLCJzY29wZXMiOlsic2hvcHMubWFuYWdlIiwic2hvcHMucmVhZCIsImNhdGFsb2cucmVhZCIsIm9yZGVycy5yZWFkIiwib3JkZXJzLndyaXRlIiwicHJvZHVjdHMucmVhZCIsInByb2R1Y3RzLndyaXRlIiwid2ViaG9va3MucmVhZCIsIndlYmhvb2tzLndyaXRlIiwidXBsb2Fkcy5yZWFkIiwidXBsb2Fkcy53cml0ZSIsInByaW50X3Byb3ZpZGVycy5yZWFkIiwidXNlci5pbmZvIl19.ApKZol-QaASkdfUG87nk9j6bakyCMHAV4lbXbAs2XTNJPqh69HTlo9AyYQHCKSlUuxHICPQeMkOIX2ZJznI'; // Replace with your Printify API key
+    const apiKey = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzN2Q0YmQzMDM1ZmUxMWU5YTgwM2FiN2VlYjNjY2M5NyIsImp0aSI6ImFhMzRhZWI1MTc2YWIwMjkwMGFiZjFjNGMyNGQ4NWE0Y2U2OTg1YmQyZWJiNWIyNGMwYTFiNjYxZTlhMzk3YzVjYWI1ODVhZWJiNDAxMjI3IiwiaWF0IjoxNzI0NTk2MDc5LjkwMDE5NiwibmJmIjoxNzI0NTk2MDc5LjkwMDE5OCwiZXhwIjoxNzU2MTMyMDc5Ljg5MDc3NSwic3ViIjoiMTkzNjUzMjIiLCJzY29wZXMiOlsic2hvcHMubWFuYWdlIiwic2hvcHMucmVhZCIsImNhdGFsb2cucmVhZCIsIm9yZGVycy5yZWFkIiwib3JkZXJzLndyaXRlIiwicHJvZHVjdHMucmVhZCIsInByb2R1Y3RzLndyaXRlIiwid2ViaG9va3MucmVhZCIsIndlYmhvb2tzLndyaXRlIiwidXBsb2Fkcy5yZWFkIiwidXBsb2Fkcy53cml0ZSIsInByaW50X3Byb3ZpZGVycy5yZWFkIiwidXNlci5pbmZvIl19.ArOc6-GV6cbXW3KOUAswnuMw5VfUsV4p6evKx7hsk6ewmu4MzQT_S_PM7091vYmOVf1tB5GPCQZVaFnQRi0'; // Replace with your Printify API key
+    const userAgent = 'couturearangam.shop'; // Replace with your application name or type of client
 
     // Fetch product data from the Printify API
     fetch('https://api.printify.com/v1/products.json', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'User-Agent': userAgent
       }
     })
       .then(response => {
