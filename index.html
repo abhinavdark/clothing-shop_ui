@@ -59,6 +59,18 @@
         </div>
     </div>
 </div>
+<script>
+    const promoItems = document.querySelectorAll('.promo-item');
+    let currentPromoIndex = 0;
+
+    function showNextPromo() {
+        promoItems[currentPromoIndex].classList.remove('active');
+        currentPromoIndex = (currentPromoIndex + 1) % promoItems.length; // Loop back to the first item
+        promoItems[currentPromoIndex].classList.add('active');
+    }
+
+    setInterval(showNextPromo, 5000); // Change promotion every 5 seconds
+</script>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
