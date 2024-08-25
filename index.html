@@ -33,16 +33,69 @@
     <meta name="twitter:description" content="Discover Couturearangam's luxurious clothing and accessories. Elevate your style with our latest collection.">
     <meta name="twitter:image" content="https://www.couturearangam.shop/assets/img/twitter-image.jpg"> <!-- Replace with actual image URL -->
 
+    <style>
+        /* Promotional Bar */
+        .promo-bar {
+            background-color: white; /* White background */
+            color: var(--title-color); /* Darker title color */
+            padding: 10px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 1px solid #e5e5e5; /* Optional: Add a bottom border for separation */
+        }
+
+        .promo-carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            height: 50px; /* Set height for the carousel */
+        }
+
+        .promo-item {
+            min-width: 100%; /* Each item takes full width */
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.5s ease; /* Fade effect */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .promo-item.active {
+            opacity: 1; /* Show active item */
+        }
+
+        /* Buttons */
+        .promo-buttons {
+            margin-top: 10px;
+        }
+
+        .promo-button {
+            background-color: var(--bg-color); /* Use your theme's background color */
+            color: white; /* Button text color */
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 0 5px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s;
+        }
+
+        .promo-button:hover {
+            background-color: var(--text-color); /* Change color on hover */
+        }
+    </style>
 </head>
  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRLJ40KW7R"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-SRLJ40KW7R');
+    gtag('config', 'G-SRLJ40KW7R');
 </script>
 <script> !function (t, e, c, n) { var s = e.createElement(c); s.async = 1, s.src = 'https://scripts.claspo.io/scripts/' + n + '.js'; var r = e.scripts[0]; r.parentNode.insertBefore(s, r); var f = function () { f.c(arguments); }; f.q = []; f.c = function () { f.q.push(arguments); }; t['claspo'] = t['claspo'] || f; }(window, document, 'script', 'CBDF8D55A72841DC8E79F1F2EF9A23A4'); </script><script>claspo('init');</script>
 <body>
@@ -103,19 +156,37 @@
                 <p>🌟 20% OFF YOUR FIRST PURCHASE! USE CODE: FIRST20 🌟</p>
             </div>
         </div>
+        <div class="promo-buttons">
+            <button id="prevPromo" class="promo-button">❮ Previous</button>
+            <button id="nextPromo" class="promo-button">Next ❯</button>
+        </div>
     </div>
 
     <script>
         const promoItems = document.querySelectorAll('.promo-item');
         let currentPromoIndex = 0;
 
-        function showNextPromo() {
-            promoItems[currentPromoIndex].classList.remove('active');
-            currentPromoIndex = (currentPromoIndex + 1) % promoItems.length; // Loop back to the first item
-            promoItems[currentPromoIndex].classList.add('active');
+        function showPromo(index) {
+            promoItems.forEach((item, i) => {
+                item.classList.remove('active');
+                if (i === index) {
+                    item.classList.add('active');
+                }
+            });
         }
 
-        setInterval(showNextPromo, 5000); // Change promotion every 5 seconds
+        document.getElementById('prevPromo').addEventListener('click', () => {
+            currentPromoIndex = (currentPromoIndex - 1 + promoItems.length) % promoItems.length; // Loop back to the last item
+            showPromo(currentPromoIndex);
+        });
+
+        document.getElementById('nextPromo').addEventListener('click', () => {
+            currentPromoIndex = (currentPromoIndex + 1) % promoItems.length; // Loop back to the first item
+            showPromo(currentPromoIndex);
+        });
+
+        // Initialize the first promo item
+        showPromo(currentPromoIndex);
     </script>
     <!--==================== MAIN ====================-->
     <main class="main">
