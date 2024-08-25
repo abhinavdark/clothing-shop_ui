@@ -50,6 +50,75 @@
     --smaller-font-size: .813rem;
   }
 }
+/* Featured Categories Section */
+.featured-categories {
+    padding: 2rem 0;
+    text-align: center; /* Center the text */
+}
+
+.category-item {
+    position: relative; /* Position relative for absolute positioning of text */
+    display: inline-block; /* Make it an inline-block for centering */
+    width: calc(50% - 1rem); /* Each item takes half the width minus margin */
+    margin: 0 0.5rem; /* Margin between items */
+}
+
+.category-image {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.category-text {
+    position: absolute; /* Position text over the image */
+    bottom: 20px; /* Position at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position to center */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for text background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.category-text h2,
+.category-text p {
+    margin: 0; /* Remove margin */
+}
+
+/* Next Button */
+.next-button {
+    display: none; /* Initially hidden */
+    color: white; /* White color */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Show button on hover */
+.category-item:hover .next-button {
+    display: inline-block; /* Show on hover */
+    opacity: 1; /* Fully visible */
+    background-color: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+/* Show text background on hover */
+.category-item:hover .category-text {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Scale image on hover */
+.category-item:hover .category-image {
+    transform: scale(1.05); /* Slightly scale up the image */
+}
  /* Promotional Bar */
         .promo-bar {
             background-color: black; /* Black background */
