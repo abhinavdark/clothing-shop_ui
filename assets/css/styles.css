@@ -79,8 +79,9 @@
     text-align: center; /* Center text */
 }
 
-/* Increase text size */
+/* Increase text size and set color to white */
 .category-text h2 {
+    color: white; /* Set the text color to white */
     font-size: 2.5rem; /* Adjust the font size for the main heading */
     margin: 0; /* Remove margin */
 }
@@ -90,6 +91,7 @@
     margin: 0; /* Remove margin */
 }
 
+/* Next Button */
 .next-button {
     display: none; /* Initially hidden */
     color: white; /* White color */
@@ -105,11 +107,6 @@
 /* Show button on hover */
 .category-item:hover .next-button {
     display: inline-block; /* Show on hover */
-}
-
-/* Show text on hover */
-.category-item:hover .category-text h2 {
-    color: white; /* Ensure text remains visible on hover */
 }
 
 /* Scale image on hover */
