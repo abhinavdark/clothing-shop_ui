@@ -51,8 +51,8 @@
 }
 /* Promotional Bar */
 .promo-bar {
-    background-color: #4CAF50; /* Green background */
-    color: white;
+    background-color: var(--bg-color); /* Light background color */
+    color: var(--title-color); /* Darker title color */
     padding: 10px 0;
     text-align: center;
     font-size: 16px;
@@ -87,6 +87,13 @@
 /* Carousel Animation */
 .promo-carousel {
     animation: slide 10s infinite; /* Adjust duration as needed */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .promo-bar {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
 }
 /*=============== BASE ===============*/
 * {
