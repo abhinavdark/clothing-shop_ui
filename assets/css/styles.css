@@ -49,33 +49,32 @@
     --smaller-font-size: .813rem;
   }
 }
-/* Promotions Section */
-.promotions {
-    background-color: #f9f9f9; /* Light background */
-    padding: 2rem 0;
-    border-radius: 10px;
-    margin: 2rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Promotional Bar */
+.promo-bar {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.promotion__carousel {
+.promo-carousel {
     display: flex;
     overflow: hidden;
     position: relative;
-    height: 60px; /* Set height for the carousel */
+    height: 50px; /* Set height for the carousel */
 }
 
-.promotion__item {
+.promo-item {
     min-width: 100%; /* Each item takes full width */
     transition: transform 0.5s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    color: #333;
 }
 
-.promotion__item.active {
+.promo-item.active {
     display: flex; /* Show active item */
 }
 
@@ -86,15 +85,8 @@
 }
 
 /* Carousel Animation */
-.promotion__carousel {
+.promo-carousel {
     animation: slide 10s infinite; /* Adjust duration as needed */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .promotion__item {
-        font-size: 1rem; /* Smaller font size on mobile */
-    }
 }
 /*=============== BASE ===============*/
 * {
