@@ -142,52 +142,48 @@
             <i class="ri-moon-line change-theme" id="theme-button"></i>
         </nav>
     </header>
-
-    <!--==================== PROMOTIONAL BAR ====================-->
-    <div class="promo-bar">
-        <div class="promo-carousel">
-            <div class="promo-item active">
-                <p>🇺🇸 FREE SHIPPING ON ALL ORDERS ABOVE €150</p>
-            </div>
-            <div class="promo-item">
-                <p>BUY NOW AND PAY LATER WITH AFTERPAY</p>
-            </div>
-            <div class="promo-item">
-                <p>🌟 20% OFF YOUR FIRST PURCHASE! USE CODE: FIRST20 🌟</p>
-            </div>
+<!--==================== PROMOTIONAL BAR ====================-->
+<div class="promo-bar">
+    <button id="prevPromo" class="promo-button">❮</button>
+    <div class="promo-carousel">
+        <div class="promo-item active">
+            <p>🇺🇸 FREE SHIPPING ON ALL ORDERS ABOVE €150</p>
         </div>
-        <div class="promo-buttons">
-            <button id="prevPromo" class="promo-button">❮ Previous</button>
-            <button id="nextPromo" class="promo-button">Next ❯</button>
+        <div class="promo-item">
+            <p>BUY NOW AND PAY LATER WITH AFTERPAY</p>
+        </div>
+        <div class="promo-item">
+            <p>🌟 20% OFF YOUR FIRST PURCHASE! USE CODE: FIRST20 🌟</p>
         </div>
     </div>
+    <button id="nextPromo" class="promo-button">❯</button>
+</div>
+   script>
+    const promoItems = document.querySelectorAll('.promo-item');
+    let currentPromoIndex = 0;
 
-    <script>
-        const promoItems = document.querySelectorAll('.promo-item');
-        let currentPromoIndex = 0;
-
-        function showPromo(index) {
-            promoItems.forEach((item, i) => {
-                item.classList.remove('active');
-                if (i === index) {
-                    item.classList.add('active');
-                }
-            });
-        }
-
-        document.getElementById('prevPromo').addEventListener('click', () => {
-            currentPromoIndex = (currentPromoIndex - 1 + promoItems.length) % promoItems.length; // Loop back to the last item
-            showPromo(currentPromoIndex);
+    function showPromo(index) {
+        promoItems.forEach((item, i) => {
+            item.classList.remove('active');
+            if (i === index) {
+                item.classList.add('active');
+            }
         });
+    }
 
-        document.getElementById('nextPromo').addEventListener('click', () => {
-            currentPromoIndex = (currentPromoIndex + 1) % promoItems.length; // Loop back to the first item
-            showPromo(currentPromoIndex);
-        });
-
-        // Initialize the first promo item
+    document.getElementById('prevPromo').addEventListener('click', () => {
+        currentPromoIndex = (currentPromoIndex - 1 + promoItems.length) % promoItems.length; // Loop back to the last item
         showPromo(currentPromoIndex);
-    </script>
+    });
+
+    document.getElementById('nextPromo').addEventListener('click', () => {
+        currentPromoIndex = (currentPromoIndex + 1) % promoItems.length; // Loop back to the first item
+        showPromo(currentPromoIndex);
+    });
+
+    // Initialize the first promo item
+    showPromo(currentPromoIndex);
+</script>
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
