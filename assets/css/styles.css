@@ -1,24 +1,45 @@
 
 
+
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
+
+/*=============== FONT FACES ===============*/
+@font-face {
+  font-family: "ITC Avant Garde Gothic";
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  src: url("//us.icon-amsterdam.com/cdn/fonts/itc_avant_garde_gothic/itcavantgardegothic_n7.e4cdcda7001c6328cfe571734c25261390a886d4.woff2?h1=dXMtcXVhbGl0eS1jbG90aGluZy1mb3IteW91LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=dXMuaWNvbi1hbXN0ZXJkYW0uY29t&hmac=9cfa10b5cd7b6ee98e56c15cf9c7e7a60655bd356c99db6f376139f58008ec37") format("woff2"),
+       url("//us.icon-amsterdam.com/cdn/fonts/itc_avant_garde_gothic/itcavantgardegothic_n7.92961a6809350e21152cba06e9fa88f81a23d481.woff?h1=dXMtcXVhbGl0eS1jbG90aGluZy1mb3IteW91LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=dXMuaWNvbi1hbXN0ZXJkYW0uY29t&hmac=16f46f46d770d0643ea44c10f1d1d052d08d26a420543004a03bd61e8572c9f9") format("woff");
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic";
+  font-weight: 700;
+  font-style: oblique;
+  font-display: fallback;
+  src: url("//us.icon-amsterdam.com/cdn/fonts/itc_avant_garde_gothic/itcavantgardegothic_o7.d81c8ac95b66b072e225c11a9f929ebfeeeacebe.woff2?h1=dXMtcXVhbGl0eS1jbG90aGluZy1mb3IteW91LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=dXMuaWNvbi1hbXN0ZXJkYW0uY29t&hmac=418994713f4195b5da1d7f97851d608d43daf8ebe3ff38a9756f44b1c00eecb5") format("woff2"),
+       url("//us.icon-amsterdam.com/cdn/fonts/itc_avant_garde_gothic/itcavantgardegothic_o7.c68868ce32fffd28bc3bf414efa7d13f0d9ac9f5.woff?h1=dXMtcXVhbGl0eS1jbG90aGluZy1mb3IteW91LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=dXMuaWNvbi1hbXN0ZXJkYW0uY29t&hmac=ce7295ad570e84c87a76605b0160ceb023c0f99adad2da490b65d0cb65a18fa6") format("woff");
+}
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-/*Color mode HSL(hue, saturation, lightness)*/
---bg-color: hsl(30, 100%, 85%); /* Light background color */
---bg-color-light: hsl(30, 100%, 90%); /* Lighter background color */
---title-color: hsl(30, 100%, 20%); /* Darker title color */
---text-color: hsl(30, 100%, 40%); /* Medium text color */
---text-color-light: hsl(30, 100%, 55%); /* Lighter text color */
---body-color: hsl(30, 100%, 95%); /* Very light body color */
---container-color: hsl(30, 100%, 92%); /* Light container color */
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --bg-color: hsl(30, 100%, 85%); /* Light background color */
+  --bg-color-light: hsl(30, 100%, 90%); /* Lighter background color */
+  --title-color: hsl(30, 100%, 20%); /* Darker title color */
+  --text-color: hsl(30, 100%, 40%); /* Medium text color */
+  --text-color-light: hsl(30, 100%, 55%); /* Lighter text color */
+  --body-color: hsl(30, 100%, 95%); /* Very light body color */
+  --container-color: hsl(30, 100%, 92%); /* Light container color */
+
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Lora', serif;
+  --body-font: 'Lora', serif; /* Default font */
+  --heading-font: 'ITC Avant Garde Gothic', sans-serif; /* Heading font */
 
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
@@ -50,6 +71,7 @@
     --smaller-font-size: .813rem;
   }
 }
+
 /* Featured Categories Section */
 .featured-categories {
     padding: 2rem 0;
