@@ -7,190 +7,118 @@
   <link rel="stylesheet" href="catalog.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="navbar">
-        <li><a href="#">Home</a></li>
-        <li>
-          <a href="#">Men</a>
-          <ul class="dropdown">
-            <li><a href="#">Shirts</a></li>
-            <li><a href="#">Pants</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Women</a>
-          <ul class="dropdown">
-            <li><a href="#">Dresses</a></li>
-            <li><a href="#">Tops</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h1>Couture Arangam Collections</h1>
-      <div class="product-grid" id="product-grid">
-        <!-- Manually added product cards -->
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250" alt="Product 1" class="main-image">
-          <img src="https://via.placeholder.com/250/ff0000" alt="Product 1 Hover" class="hover-image">
-          <h3>Product 1</h3>
-          <p>$29.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250" alt="Product 2" class="main-image">
-          <img src="https://via.placeholder.com/250/ff0000" alt="Product 2 Hover" class="hover-image">
-          <h3>Product 2</h3>
-          <p>$39.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250" alt="Product 3" class="main-image">
-          <img src="https://via.placeholder.com/250/ff0000" alt="Product 3 Hover" class="hover-image">
-          <h3>Product 3</h3>
-          <p>$49.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250" alt="Product 4" class="main-image">
-          <img src="https://via.placeholder.com/250/ff0000" alt="Product 4 Hover" class="hover-image">
-          <h3>Product 4</h3>
-          <p>$59.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/250" alt="Product 5" class="main-image">
-          <img src="https://via.placeholder.com/250/ff0000" alt="Product 5 Hover" class="hover-image">
-          <h3>Product 5</h3>
-          <p>$69.99</p>
-        </div>
-      </div>
-    </section>
-  </main>
-   <!--==================== FOOTER ====================-->
-    <footer class="footer section">
-        <div class="footer__container container grid">
-            <div>
-                <a href="#" class="footer__logo">
-                    Couturearangam.
-                </a>
-                
-                <p class="footer__description">
-                    Committed to bringing you the <br> 
-                    best high-quality clothing and accessories <br>
-                    from popular Indian brands.
-                </p>
-            </div>
-
-            <div class="footer__content">
-                <div>
-                    <h3 class="footer__title">
-                        Company
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">Shop</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Category</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Contact info</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Blog
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">Events</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Popular news</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Recent news</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Office Hours
-                    </h3>
-
-                    <p class="footer__information">
-                        Monday - Saturday <br>
-                        9AM - 10PM
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Connect with Us
-                    </h3>
-
-                    <ul class="footer__social">
-                        <a href="https://www.facebook.com/profile.php?id=61564366414536" target="_blank" class="footer__social-link">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="https://www.instagram.com/couturearangam" target="_blank" class="footer__social-link">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=+911234567890&text=Hello, more information!" target="_blank" class="footer__social-link">
-                            <i class="ri-whatsapp-line"></i>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer__info container">
-            <span class="footer__copy">
-                &#169; 2023 Couturearangam. All rights reserved.
-            </span>
-
-            <a href="#" class="footer__privacy">
-                Terms & Conditions
+   <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Couture Arangam.
             </a>
-        </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="ri-home-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>New</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="https://checkout.couturearangam.shop/" class="nav__link">
+                            <i class="ri-compass-line"></i>
+                            <span>Collection</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="https://couturearangam.shop/about" class="nav__link">
+                            <i class="ri-t-shirt-line"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link">
+                            <span>Men</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Pants</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link">
+                            <span>Women</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Dresses</a></li>
+                            <li><a href="#">Tops</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+        </nav>
+    </header>
+    <!--==================== HEADER ====================-->
+
+    <main>
+        <section>
+          <h1>Couture Arangam Collections</h1>
+          <div class="product-grid" id="product-grid">
+            <!-- Manually added product cards -->
+            <div class="product-card">
+              <img src="https://via.placeholder.com/250" alt="Product 1" class="main-image">
+              <img src="https://via.placeholder.com/250/ff0000" alt="Product 1 Hover" class="hover-image">
+              <h3>Product 1</h3>
+              <p>$29.99</p>
+            </div>
+            <div class="product-card">
+              <img src="https://via.placeholder.com/250" alt="Product 2" class="main-image">
+              <img src="https://via.placeholder.com/250/ff0000" alt="Product 2 Hover" class="hover-image">
+              <h3>Product 2</h3>
+              <p>$39.99</p>
+            </div>
+            <div class="product-card">
+              <img src="https://via.placeholder.com/250" alt="Product 3" class="main-image">
+              <img src="https://via.placeholder.com/250/ff0000" alt="Product 3 Hover" class="hover-image">
+              <h3>Product 3</h3>
+              <p>$49.99</p>
+            </div>
+            <div class="product-card">
+              <img src="https://via.placeholder.com/250" alt="Product 4" class="main-image">
+              <img src="https://via.placeholder.com/250/ff0000" alt="Product 4 Hover" class="hover-image">
+              <h3>Product 4</h3>
+              <p>$59.99</p>
+            </div>
+            <div class="product-card">
+              <img src="https://via.placeholder.com/250" alt="Product 5" class="main-image">
+              <img src="https://via.placeholder.com/250/ff0000" alt="Product 5 Hover" class="hover-image">
+              <h3>Product 5</h3>
+              <p>$69.99</p>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Add your footer content here -->
     </footer>
 
-    <!--========== SCROLL UP ==========-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-line"></i>
-    </a>
-        
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
-
-    <!--=============== SWIPER JS ===============-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-<script>
-        // JavaScript to handle the scrolling effect
-        window.addEventListener('scroll', function() {
-            const promoBar = document.querySelector('.promo-bar');
-            if (window.scrollY > 50) { // Adjust this value to control when the bar minimizes
-                promoBar.style.padding = '2px 0'; // Reduce padding
-                promoBar.style.height = '5px'; // Set height to make it a line
-                promoBar.style.fontSize = '0'; // Hide text
-            } else {
-                promoBar.style.padding = '10px 0'; // Reset padding
-                promoBar.style.height = 'auto'; // Reset height
-                promoBar.style.fontSize = '16px'; // Reset font size
-            }
-        });
+    <script>
+        // No JavaScript needed for manual product entries
     </script>
 </body>
 </html>
