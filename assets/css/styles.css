@@ -72,25 +72,24 @@
 
 .category-text {
     position: absolute; /* Position text over the image */
-    bottom: 20px; /* Position at the bottom */
+    top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust position to center */
+    transform: translate(-50%, -50%); /* Adjust position to center */
     color: white; /* White text color */
     text-align: center; /* Center text */
 }
 
 /* Increase text size */
 .category-text h2 {
-    font-size: 2rem; /* Adjust the font size for the main heading */
+    font-size: 2.5rem; /* Adjust the font size for the main heading */
     margin: 0; /* Remove margin */
 }
 
 .category-text p {
-    font-size: 1.2rem; /* Increase size of the description */
+    font-size: 1.5rem; /* Increase size of the description */
     margin: 0; /* Remove margin */
 }
 
-/* Next Button */
 .next-button {
     display: none; /* Initially hidden */
     color: white; /* White color */
@@ -122,8 +121,8 @@
 .icon {
     margin-left: 0.5rem; /* Space between text and icon */
     vertical-align: middle; /* Align icon with text */
-    width: 32px; /* Set width for the icon */
-    height: 32px; /* Set height for the icon */
+    width: 40px; /* Set width for the icon */
+    height: 40px; /* Set height for the icon */
 }
  /* Promotional Bar */
         .promo-bar {
