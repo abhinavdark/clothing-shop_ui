@@ -50,8 +50,8 @@ body {
   text-decoration: none;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block; /* Show dropdown on hover */
+.dropdown-menu li a:hover {
+  background-color: #ddd;
 }
 
 .product-grid {
