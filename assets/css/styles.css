@@ -50,39 +50,39 @@
   }
 }
 /* Promotional Bar */
-.promo-bar {
-    background-color: black; /* Black background */
-    color: white; /* White text color */
-    padding: 5px 0; /* Reduced padding for height */
-    text-align: center;
-    font-size: 16px; /* Font size */
-    font-weight: bold;
-    border-bottom: 1px solid #e5e5e5; /* Optional: Add a bottom border for separation */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center align items vertically */
-    justify-content: center; /* Center align items horizontally */
-    width: 100%; /* Full width */
-}
+        .promo-bar {
+            background-color: black; /* Black background */
+            color: white; /* White text color */
+            padding: 10px 0; /* Initial padding */
+            text-align: center;
+            font-size: 16px; /* Font size */
+            font-weight: bold;
+            border-bottom: 1px solid #e5e5e5; /* Optional: Add a bottom border for separation */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center align items vertically */
+            justify-content: center; /* Center align items horizontally */
+            width: 100%; /* Full width */
+            transition: padding 0.3s ease, font-size 0.3s ease; /* Smooth transition for padding and font size */
+        }
 
-.promo-carousel {
-    display: flex;
-    position: relative;
-    height: 30px; /* Set a reduced height for the carousel */
-    animation: slide 10s linear infinite; /* Automatic sliding animation */
-}
+        .promo-carousel {
+            display: flex;
+            position: relative;
+            height: 50px; /* Set height for the carousel */
+            animation: slide 10s linear infinite; /* Automatic sliding animation */
+        }
 
-.promo-item {
-    min-width: 100%; /* Each item takes full width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .promo-item {
+            min-width: 100%; /* Each item takes full width */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* Animation for carousel */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
+        /* Animation for carousel */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
