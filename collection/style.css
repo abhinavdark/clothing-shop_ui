@@ -333,3 +333,45 @@ a {
     transition: top .3s;
   }
 }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  height: 300px; /* Increased height */
+  overflow: hidden; /* Hide overflow for hover effect */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card .hover-image {
+  opacity: 0; /* Hide hover image by default */
+}
+
+.product-card:hover .main-image {
+  opacity: 0; /* Hide main image on hover */
+}
+
+.product-card:hover .hover-image {
+  opacity: 1; /* Show hover image on hover */
+}
+
+.product-card h3, .product-card p {
+  margin: 10px 0; /* Add some margin for spacing */
+}
