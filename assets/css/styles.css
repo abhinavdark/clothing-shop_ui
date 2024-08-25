@@ -119,6 +119,12 @@
 .category-item:hover .category-image {
     transform: scale(1.05); /* Slightly scale up the image */
 }
+
+/* Icon styling */
+.icon {
+    margin-left: 0.5rem; /* Space between text and icon */
+    vertical-align: middle; /* Align icon with text */
+}
  /* Promotional Bar */
         .promo-bar {
             background-color: black; /* Black background */
