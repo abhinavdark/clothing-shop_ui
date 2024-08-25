@@ -79,10 +79,7 @@
     text-align: center; /* Center text */
 }
 
-.category-text h2 {
-    margin: 0; /* Remove margin */
-}
-
+/* Next Button */
 .next-button {
     display: none; /* Initially hidden */
     color: white; /* White color */
@@ -91,27 +88,23 @@
     text-decoration: none; /* Remove underline */
     padding: 10px 20px; /* Padding for the button */
     background-color: transparent; /* Transparent background */
-    border: 2px solid white; /* White border */
-    border-radius: 5px; /* Rounded corners */
+    border: none; /* Remove border */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 /* Show button on hover */
 .category-item:hover .next-button {
     display: inline-block; /* Show on hover */
-    opacity: 1; /* Fully visible */
-    background-color: white; /* Change background color on hover */
-    color: black; /* Change text color on hover */
-}
-
-/* Scale image on hover */
-.category-item:hover .category-image {
-    transform: scale(1.05); /* Slightly scale up the image */
 }
 
 /* Show text on hover */
 .category-item:hover .category-text h2 {
     color: white; /* Ensure text remains visible on hover */
+}
+
+/* Scale image on hover */
+.category-item:hover .category-image {
+    transform: scale(1.05); /* Slightly scale up the image */
 }
  /* Promotional Bar */
         .promo-bar {
