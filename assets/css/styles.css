@@ -50,19 +50,21 @@
   }
 }
 /* Promotional Bar */
-        .promo-bar {
-            background-color: black; /* Black background */
-            color: white; /* White text color */
-            padding: 10px 0;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            border-bottom: 1px solid #e5e5e5; /* Optional: Add a bottom border for separation */
-            display: flex; /* Use flexbox for alignment */
-            align-items: center; /* Center align items vertically */
-            justify-content: center; /* Center align items horizontally */
-            overflow: hidden; /* Hide overflow */
-        }
+.promo-bar {
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #e5e5e5; /* Optional: Add a bottom border for separation */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    overflow: hidden; /* Hide overflow */
+    max-width: 800px; /* Set a maximum width for the bar */
+    margin: 0 auto; /* Center the bar */
+}
 
         .promo-carousel {
             display: flex;
