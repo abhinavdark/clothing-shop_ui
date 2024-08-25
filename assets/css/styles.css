@@ -79,6 +79,17 @@
     text-align: center; /* Center text */
 }
 
+/* Increase text size */
+.category-text h2 {
+    font-size: 2rem; /* Adjust the font size for the main heading */
+    margin: 0; /* Remove margin */
+}
+
+.category-text p {
+    font-size: 1.2rem; /* Increase size of the description */
+    margin: 0; /* Remove margin */
+}
+
 /* Next Button */
 .next-button {
     display: none; /* Initially hidden */
@@ -105,6 +116,14 @@
 /* Scale image on hover */
 .category-item:hover .category-image {
     transform: scale(1.05); /* Slightly scale up the image */
+}
+
+/* Icon styling */
+.icon {
+    margin-left: 0.5rem; /* Space between text and icon */
+    vertical-align: middle; /* Align icon with text */
+    width: 32px; /* Set width for the icon */
+    height: 32px; /* Set height for the icon */
 }
  /* Promotional Bar */
         .promo-bar {
