@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couture Arangam - Collections</title>
+  <style>
+    /* Add your CSS styles here */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Add your navigation menu here -->
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Couture Arangam Collections</h1>
+      <div class="product-grid" id="product-grid">
+        <!-- Product cards will be dynamically generated here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Add your footer content here -->
+  </footer>
+
+  <script>
+    const apiKey = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzN2Q0YmQzMDM1ZmUxMWU5YTgwM2FiN2VlYjNjY2M5NyIsImp0aSI6ImFhMzRhZWI1MTc2YWIwMjkwMGFiZjFjNGMyNGQ4NWE0Y2U2OTg1YmQyZWJiNWIyNGMwYTFiNjYxZTlhMzk3YzVjYWI1ODVhZWJiNDAxMjI3IiwiaWF0IjoxNzI0NTk2MDc5LjkwMDE5NiwibmJmIjoxNzI0NTk2MDc5LjkwMDE5OCwiZXhwIjoxNzU2MTMyMDc5Ljg5MDc3NSwic3ViIjoiMTkzNjUzMjIiLCJzY29wZXMiOlsic2hvcHMubWFuYWdlIiwic2hvcHMucmVhZCIsImNhdGFsb2cucmVhZCIsIm9yZGVycy5yZWFkIiwib3JkZXJzLndyaXRlIiwicHJvZHVjdHMucmVhZCIsInByb2R1Y3RzLndyaXRlIiwid2ViaG9va3MucmVhZCIsIndlYmhvb2tzLndyaXRlIiwidXBsb2Fkcy5yZWFkIiwidXBsb2Fkcy53cml0ZSIsInByaW50X3Byb3ZpZGVycy5yZWFkIiwidXNlci5pbmZvIl19.ArOc6-GV6cbXW3KOUAswnuMw5VfUsV4p6evKx7hsk6ewmu4MzQT_S_PM7091vYmOVf1tB5GPCQZVaFnQRi0'; // Replace with your Printify API key
+
+    // Fetch product data from the Printify API
+    fetch('https://api.printify.com/v1/products.json', {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const productGrid = document.getElementById('product-grid');
+
+        data.products.forEach(product => {
+          const productCard = document.createElement('div');
+          productCard.classList.add('product-card');
+
+          const productImage = document.createElement('img');
+          productImage.src = product.images[0].src; // Assuming the first image is the main one
+          productImage.alt = product.title;
+
+          const productName = document.createElement('h3');
+          productName.textContent = product.title;
+
+          const productPrice = document.createElement('p');
+          productPrice.textContent = `$${(product.variants[0].price / 100).toFixed(2)}`; // Convert cents to dollars
+
+          productCard.appendChild(productImage);
+          productCard.appendChild(productName);
+          productCard.appendChild(productPrice);
+
+          productGrid.appendChild(productCard);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  </script>
+</body>
+</html>
