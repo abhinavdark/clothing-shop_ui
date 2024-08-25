@@ -47,6 +47,48 @@
 </script>
 <script> !function (t, e, c, n) { var s = e.createElement(c); s.async = 1, s.src = 'https://scripts.claspo.io/scripts/' + n + '.js'; var r = e.scripts[0]; r.parentNode.insertBefore(s, r); var f = function () { f.c(arguments); }; f.q = []; f.c = function () { f.q.push(arguments); }; t['claspo'] = t['claspo'] || f; }(window, document, 'script', 'CBDF8D55A72841DC8E79F1F2EF9A23A4'); </script><script>claspo('init');</script>
 <body>
+<!--==================== PROMOTIONAL BAR ====================-->
+<div class="promo-bar">
+    <button id="prevPromo" class="promo-button">❮</button>
+    <div class="promo-carousel">
+        <div class="promo-item active">
+            <p>🇺🇸 FREE SHIPPING ON ALL ORDERS ABOVE €150</p>
+        </div>
+        <div class="promo-item">
+            <p>BUY NOW AND PAY LATER WITH AFTERPAY</p>
+        </div>
+        <div class="promo-item">
+            <p>🌟 20% OFF YOUR FIRST PURCHASE! USE CODE: FIRST20 🌟</p>
+        </div>
+    </div>
+    <button id="nextPromo" class="promo-button">❯</button>
+</div>
+   <script>
+    const promoItems = document.querySelectorAll('.promo-item');
+    let currentPromoIndex = 0;
+
+    function showPromo(index) {
+        promoItems.forEach((item, i) => {
+            item.classList.remove('active');
+            if (i === index) {
+                item.classList.add('active');
+            }
+        });
+    }
+
+    document.getElementById('prevPromo').addEventListener('click', () => {
+        currentPromoIndex = (currentPromoIndex - 1 + promoItems.length) % promoItems.length; // Loop back to the last item
+        showPromo(currentPromoIndex);
+    });
+
+    document.getElementById('nextPromo').addEventListener('click', () => {
+        currentPromoIndex = (currentPromoIndex + 1) % promoItems.length; // Loop back to the first item
+        showPromo(currentPromoIndex);
+    });
+
+    // Initialize the first promo item
+    showPromo(currentPromoIndex);
+</script>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -90,48 +132,7 @@
             <i class="ri-moon-line change-theme" id="theme-button"></i>
         </nav>
     </header>
-<!--==================== PROMOTIONAL BAR ====================-->
-<div class="promo-bar">
-    <button id="prevPromo" class="promo-button">❮</button>
-    <div class="promo-carousel">
-        <div class="promo-item active">
-            <p>🇺🇸 FREE SHIPPING ON ALL ORDERS ABOVE €150</p>
-        </div>
-        <div class="promo-item">
-            <p>BUY NOW AND PAY LATER WITH AFTERPAY</p>
-        </div>
-        <div class="promo-item">
-            <p>🌟 20% OFF YOUR FIRST PURCHASE! USE CODE: FIRST20 🌟</p>
-        </div>
-    </div>
-    <button id="nextPromo" class="promo-button">❯</button>
-</div>
-   <script>
-    const promoItems = document.querySelectorAll('.promo-item');
-    let currentPromoIndex = 0;
 
-    function showPromo(index) {
-        promoItems.forEach((item, i) => {
-            item.classList.remove('active');
-            if (i === index) {
-                item.classList.add('active');
-            }
-        });
-    }
-
-    document.getElementById('prevPromo').addEventListener('click', () => {
-        currentPromoIndex = (currentPromoIndex - 1 + promoItems.length) % promoItems.length; // Loop back to the last item
-        showPromo(currentPromoIndex);
-    });
-
-    document.getElementById('nextPromo').addEventListener('click', () => {
-        currentPromoIndex = (currentPromoIndex + 1) % promoItems.length; // Loop back to the first item
-        showPromo(currentPromoIndex);
-    });
-
-    // Initialize the first promo item
-    showPromo(currentPromoIndex);
-</script>
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
