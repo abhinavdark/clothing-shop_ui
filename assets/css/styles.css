@@ -77,18 +77,12 @@
     transform: translateX(-50%); /* Adjust position to center */
     color: white; /* White text color */
     text-align: center; /* Center text */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-    padding: 10px; /* Padding around the text */
-    border-radius: 5px; /* Rounded corners for text background */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-.category-text h2,
-.category-text p {
+.category-text h2 {
     margin: 0; /* Remove margin */
 }
 
-/* Next Button */
 .next-button {
     display: none; /* Initially hidden */
     color: white; /* White color */
@@ -110,20 +104,14 @@
     color: black; /* Change text color on hover */
 }
 
-/* Show text background on hover */
-.category-item:hover .category-text {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
-}
-
 /* Scale image on hover */
 .category-item:hover .category-image {
     transform: scale(1.05); /* Slightly scale up the image */
 }
 
-/* Icon styling */
-.icon {
-    margin-left: 0.5rem; /* Space between text and icon */
-    vertical-align: middle; /* Align icon with text */
+/* Show text on hover */
+.category-item:hover .category-text h2 {
+    color: white; /* Ensure text remains visible on hover */
 }
  /* Promotional Bar */
         .promo-bar {
