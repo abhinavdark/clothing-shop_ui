@@ -74,15 +74,17 @@
 
 /* Featured Categories Section */
 .featured-categories {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
     padding: 2rem 0;
     text-align: center; /* Center the text */
 }
 
 .category-item {
     position: relative; /* Position relative for absolute positioning of text */
-    display: inline-block; /* Make it an inline-block for centering */
-    width: calc(50% - 1rem); /* Each item takes half the width minus margin */
+    flex: 1; /* Allow items to grow and fill space equally */
     margin: 0 0.5rem; /* Margin between items */
+    max-width: 500px; /* Optional: Set a max width for each item */
 }
 
 .category-image {
