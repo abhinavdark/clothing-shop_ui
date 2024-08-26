@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Admin Panel - Couture Arangam</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-    <div class="admin-panel">
-        <h2>Admin Panel</h2>
-        <a href="index.html" class="catalog-link">View Product Catalog</a>
-        
-        <h3>Add New Product</h3>
+    <header>
+        <h1>Admin Panel</h1>
+        <a href="index.html">Go to Main Page</a>
+    </header>
+
+    <main>
         <form id="product-form">
             <div>
                 <label for="product-name">Product Name:</label>
@@ -29,9 +30,9 @@
                 <label for="product-link">Product Link:</label>
                 <input type="text" id="product-link" placeholder="Enter product link" required>
             </div>
-            <button type="submit" id="add-product">Add Product</button>
+            <button type="submit">Add Product</button>
         </form>
-        
+
         <h3>Existing Products</h3>
         <table id="product-table">
             <thead>
@@ -46,9 +47,9 @@
             <tbody></tbody>
         </table>
 
-        
-        <div id="message" class="message"></div>
-    </div>
-    <script src="bs-adminscript.js"></script>
+        <div id="message"></div>
+    </main>
+
+    <script type="module" src="script.js"></script> <!-- Link to the admin script -->
 </body>
 </html>
