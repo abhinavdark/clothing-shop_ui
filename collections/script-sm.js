@@ -10,24 +10,24 @@ const products = [
     },
     {
         "id": "prod2",
-        "name": "Casual Shirt",
-        "price": "29.99",
-        "image": "https://via.placeholder.com/250",
-        "link": "https://example.com/product2"
+        "name": "Mûr d'Été T-shirt",
+        "price": "36.60",
+        "image": "https://images-api.printify.com/mockup/66cc998e8a0ec50bad05dc78/43111/634/mur-dete-t-shirt_1724684718993.jpg?camera_label=flat-front&s=400",
+        "link": "https://checkout.couturearangam.shop/Mur-ddete-T-shirt"
     },
     {
         "id": "prod3",
-        "name": "Leather Jacket",
-        "price": "99.99",
-        "image": "https://via.placeholder.com/250",
-        "link": "https://example.com/product3"
+        "name": "Pagal couleur",
+        "price": "43.56",
+        "image": "https://images-api.printify.com/mockup/66cca6bcaeeee15fb002cc6a/43111/3003/pagal-couleur_1724688566613.jpg?camera_label=on-person-front&s=400",
+        "link": "https://checkout.couturearangam.shop/pagal-couleur"
     },
     {
         "id": "prod4",
-        "name": "Running Shoes",
-        "price": "69.99",
-        "image": "https://via.placeholder.com/250",
-        "link": "https://example.com/product4"
+        "name": "Été Kadal",
+        "price": "87.18",
+        "image": "https://images-api.printify.com/mockup/66ccaa24df56894d3d06edab/45055/1286/ete-kadal_1724689327596.jpg?camera_label=front&s=400",
+        "link": "https://checkout.couturearangam.shop/ete-kadal"
     }
 ];
 
