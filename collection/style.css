@@ -92,6 +92,26 @@
     margin: 5px 0 0;
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+
+    .bestsellers h1 {
+        font-size: 28px; /* Adjust font size for mobile */
+    }
+
+    .shipping-info h1 {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .shipping-info p {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
+
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
