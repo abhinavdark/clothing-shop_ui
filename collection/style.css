@@ -13,69 +13,6 @@
 }
 
 .hero h1 {
-    font-size: 36px; /* Reduced font size */
-    margin: 0;
-}
-
-/* Free Shipping Section */
-.shipping-info {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.shipping-info h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.shipping-info p {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Bestsellers Section */
-.bestsellers {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.bestsellers h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-}
-
-.product-card {
-    text-align: center; /* Center text within the card */
-}
-
-.product-card img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
-    border: none; /* No border */
-    border-radius: 0; /* No rounded corners */
-}
-
-.product-card h3 {
-    font-size: 16px; /* Smaller font size for product name */
-    margin: 10px 0 5px; /* Margin for spacing */
-}
-
-.product-card p {
-    font-size: 14px; /* Smaller font size for price */
-    color: #333; /* Darker color for contrast */
-}
-
-/* Hover Effect */
-.product-card:hover img {
-    opacity: 0.8; /* Slightly dim the image on hover */
-}.hero h1 {
     font-size: 36px; /* Font size for the hero heading */
     margin: 0;
 }
@@ -110,7 +47,7 @@
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-gap: 20px; /* Reduced gap between cards */
 }
 
 .product-card {
@@ -118,6 +55,14 @@
     width: 90%; /* Slightly reduced width for the cards */
     margin: 0 auto; /* Center the card within the grid cell */
     padding: 0 10px; /* Add padding to create a gap */
+}
+
+.product-card:first-child {
+    margin-left: 0; /* Remove left margin for the first card */
+}
+
+.product-card:last-child {
+    margin-right: 0; /* Remove right margin for the last card */
 }
 
 .product-card img {
@@ -142,7 +87,6 @@
 .product-card:hover img {
     opacity: 0.8; /* Slightly dim the image on hover */
 }
-
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
 
