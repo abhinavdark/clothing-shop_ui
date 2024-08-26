@@ -1,9 +1,10 @@
 /* Hero Section */
 .hero {
-    background-image: url('https://img.freepik.com/free-photo/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper_1258-103233.jpg?w=1380&t=st=1724644582~exp=1724645182~hmac=30e30ceaf2f2acdbeb512d1b7f7af6c1ece30cfcdcadf8d6dd8f6eb6c7012ce3'); /* Replace with your hero image URL */
+    background-image: url('hero-image.jpg'); /* Replace with your hero image URL */
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 300px; /* Reduced height */
+    width: 100%; /* Full width */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +13,7 @@
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 36px; /* Reduced font size */
     margin: 0;
 }
 
@@ -50,32 +51,31 @@
 }
 
 .product-card {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
+    text-align: center; /* Center text within the card */
 }
 
 .product-card img {
     width: 100%;
-    height: 300px;
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
+    border: none; /* No border */
+    border-radius: 0; /* No rounded corners */
 }
 
 .product-card h3 {
-    font-size: 18px;
-    margin: 15px 0 10px;
+    font-size: 16px; /* Smaller font size for product name */
+    margin: 10px 0 5px; /* Margin for spacing */
 }
 
 .product-card p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+    font-size: 14px; /* Smaller font size for price */
+    color: #333; /* Darker color for contrast */
 }
 
+/* Hover Effect */
+.product-card:hover img {
+    opacity: 0.8; /* Slightly dim the image on hover */
+}
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
