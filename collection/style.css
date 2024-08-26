@@ -1,4 +1,80 @@
+/* Hero Section */
+.hero {
+    background-image: url('https://img.freepik.com/free-photo/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper_1258-103233.jpg?w=1380&t=st=1724644582~exp=1724645182~hmac=30e30ceaf2f2acdbeb512d1b7f7af6c1ece30cfcdcadf8d6dd8f6eb6c7012ce3'); /* Replace with your hero image URL */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
 
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+/* Free Shipping Section */
+.shipping-info {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.shipping-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.shipping-info p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Bestsellers Section */
+.bestsellers {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.bestsellers h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+.product-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
 
 
 /*=============== GOOGLE FONTS ===============*/
