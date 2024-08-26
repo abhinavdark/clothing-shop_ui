@@ -52,19 +52,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px; /* Space between cards */
-    padding: 0 50px; /* Increased gap on left and right */
-    width: 80%; /* Reduced width */
-    margin: 0 auto; /* Center the grid */
+    padding: 0 30px; /* Gap on either side of the product cards */
 }
 
 .product-card {
-    background-color: transparent; /* Remove the white background */
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: none; /* Remove shadow for a cleaner look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s;
-    height: 400px; /* Increased height for the card */
 }
 
 .product-card:hover {
@@ -73,30 +70,20 @@
 
 .product-card img {
     width: 100%;
-    height: 250px; /* Increased image height */
-    object-fit: cover; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 .product-card h3 {
     font-size: 16px;
-    margin: 10px 0 5px; /* Margin for spacing */
+    margin: 10px 0 5px;
 }
 
 .product-card p {
     font-size: 14px;
     color: #333;
-    margin-bottom: 10px; /* Add margin below the price */
 }
 
-.admin-panel {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.admin-panel input, .admin-panel button {
-    margin: 5px;
-    padding: 5px 10px;
-}
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
