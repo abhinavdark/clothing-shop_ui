@@ -8,7 +8,7 @@ async function addProduct(event) {
     const nameInput = document.getElementById('product-name');
     const priceInput = document.getElementById('product-price');
     const imageInput = document.getElementById('product-image');
-    const linkInput = document.getElementById('product-link');
+    const linkInput = document.getElementById('product-link'); // New input for link
 
     const newProduct = {
         id: `prod${Date.now()}`, // Unique ID based on timestamp
@@ -82,7 +82,7 @@ function renderProductTable() {
         row.appendChild(nameCell);
         row.appendChild(priceCell);
         row.appendChild(imageCell);
-        row.appendChild(linkCell);
+        row.appendChild(linkCell); // Append the link cell
         row.appendChild(actionsCell);
 
         tableBody.appendChild(row);
@@ -95,7 +95,7 @@ function editProduct(product) {
     const nameInput = document.getElementById('product-name');
     const priceInput = document.getElementById('product-price');
     const imageInput = document.getElementById('product-image');
-    const linkInput = document.getElementById('product-link');
+    const linkInput = document.getElementById('product-link'); // New input for link
 
     // Populate the form with the product data
     nameInput.value = product.name;
@@ -105,7 +105,13 @@ function editProduct(product) {
 
     // Add an event listener to the form submission
     const form = document.getElementById('product-form');
-    form.addEventListener('submit', function handleFormSubmit(event) {
+    
+    // Remove any existing event listener to avoid stacking
+    form.removeEventListener('submit', handleFormSubmit);
+    
+    form.addEventListener('submit', handleFormSubmit);
+
+    function handleFormSubmit(event) {
         event.preventDefault();
 
         // Update the product data
@@ -119,9 +125,6 @@ function editProduct(product) {
         const updatedProducts = storedProducts.map(p => (p.id === product.id ? product : p));
         localStorage.setItem('products', JSON.stringify(updatedProducts));
 
-        // Remove the event listener to avoid multiple submissions
-        form.removeEventListener('submit', handleFormSubmit);
-
         // Show success message
         const messageDiv = document.getElementById('message');
         messageDiv.textContent = `Product "${product.name}" updated successfully!`;
@@ -134,7 +137,7 @@ function editProduct(product) {
 
         // Render the updated product table
         renderProductTable();
-    });
+    }
 }
 
 // Function to delete a product
