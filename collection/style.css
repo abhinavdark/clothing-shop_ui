@@ -44,45 +44,58 @@
     margin-bottom: 30px;
 }
 
+.product-catalog {
+    padding: 20px;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px; /* Reduced gap between cards */
+    grid-gap: 20px;
+    padding: 0 50px; /* Increased gap on left and right */
+    width: 80%; /* Reduced width */
+    margin: 0 auto; /* Center the grid */
 }
 
 .product-card {
-    text-align: center; /* Center text within the card */
-    width: 90%; /* Slightly reduced width for the cards */
-    margin: 0 auto; /* Center the card within the grid cell */
-    padding: 0 10px; /* Add padding to create a gap */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    height: 350px; /* Increased height */
 }
 
-.product-card:first-child {
-    margin-left: 80px; /* Increase left margin for the first card */
-}
-
-.product-card:last-child {
-    margin-right: 80px; /* Increase right margin for the last card */
+.product-card:hover {
+    transform: scale(1.05);
 }
 
 .product-card img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 200px; /* Increased image height */
     object-fit: cover;
-    border: none; /* No border */
-    border-radius: 0; /* No rounded corners */
 }
 
 .product-card h3 {
-    font-size: 16px; /* Smaller font size for product name */
-    margin: 10px 0 5px; /* Margin for spacing */
+    font-size: 16px;
+    margin: 10px 0 5px;
 }
 
 .product-card p {
-    font-size: 14px; /* Smaller font size for price */
-    color: #333; /* Darker color for contrast */
+    font-size: 14px;
+    color: #333;
 }
 
+.admin-panel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.admin-panel input, .admin-panel button {
+    margin: 5px;
+    padding: 5px 10px;
+}
 /* Hover Effect */
 .product-card:hover img {
     opacity: 0.8; /* Slightly dim the image on hover */
