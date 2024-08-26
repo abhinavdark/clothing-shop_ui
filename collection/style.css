@@ -97,10 +97,7 @@
     margin: 5px;
     padding: 5px 10px;
 }
-/* Hover Effect */
-.product-card:hover img {
-    opacity: 0.8; /* Slightly dim the image on hover */
-}
+
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
 
