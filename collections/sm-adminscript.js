@@ -13,10 +13,10 @@ async function addProduct(event) {
         image: imageInput.value
     };
 
-    // Add the new product to the products array
-    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
-    storedProducts.push(newProduct);
-    localStorage.setItem('products', JSON.stringify(storedProducts));
+    // Add the new product to the bestsellingProducts array
+    const storedbestsellingProducts = JSON.parse(localStorage.getItem('bestsellingProducts')) || [];
+    storedbestsellingProducts.push(newProduct);
+    localStorage.setItem('bestsellingProducts', JSON.stringify(storedbestsellingProducts));
 
     // Show success message
     const messageDiv = document.getElementById('message');
@@ -35,11 +35,11 @@ async function addProduct(event) {
 function renderProductTable() {
     const productTable = document.getElementById('product-table');
     const tableBody = productTable.getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = ''; // Clear existing products
+    tableBody.innerHTML = ''; // Clear existing bestsellingProducts
 
-    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+    const storedbestsellingProducts = JSON.parse(localStorage.getItem('bestsellingProducts')) || [];
 
-    storedProducts.forEach(product => {
+    storedbestsellingProducts.forEach(product => {
         const row = document.createElement('tr');
 
         const nameCell = document.createElement('td');
@@ -78,12 +78,12 @@ function renderProductTable() {
     // Add event listeners for the edit and delete buttons
     const editButtons = document.querySelectorAll('.edit-button');
     editButtons.forEach((button, index) => {
-        button.addEventListener('click', () => editProduct(storedProducts[index]));
+        button.addEventListener('click', () => editProduct(storedbestsellingProducts[index]));
     });
 
     const deleteButtons = document.querySelectorAll('.delete-button');
     deleteButtons.forEach((button, index) => {
-        button.addEventListener('click', () => deleteProduct(storedProducts[index].id));
+        button.addEventListener('click', () => deleteProduct(storedbestsellingProducts[index].id));
     });
 }
 
@@ -109,10 +109,10 @@ function editProduct(product) {
         product.price = priceInput.value;
         product.image = imageInput.value;
 
-        // Save the updated products to localStorage
-        const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
-        const updatedProducts = storedProducts.map(p => (p.id === product.id ? product : p));
-        localStorage.setItem('products', JSON.stringify(updatedProducts));
+        // Save the updated bestsellingProducts to localStorage
+        const storedbestsellingProducts = JSON.parse(localStorage.getItem('bestsellingProducts')) || [];
+        const updatedbestsellingProducts = storedbestsellingProducts.map(p => (p.id === product.id ? product : p));
+        localStorage.setItem('bestsellingProducts', JSON.stringify(updatedbestsellingProducts));
 
         // Remove the event listener to avoid multiple submissions
         form.removeEventListener('submit', handleFormSubmit);
@@ -133,14 +133,14 @@ function editProduct(product) {
 
 // Function to delete a product
 function deleteProduct(productId) {
-    // Get the stored products from localStorage
-    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+    // Get the stored bestsellingProducts from localStorage
+    const storedbestsellingProducts = JSON.parse(localStorage.getItem('bestsellingProducts')) || [];
 
     // Filter out the product to be deleted
-    const updatedProducts = storedProducts.filter(p => p.id !== productId);
+    const updatedbestsellingProducts = storedbestsellingProducts.filter(p => p.id !== productId);
 
-    // Save the updated products to localStorage
-    localStorage.setItem('products', JSON.stringify(updatedProducts));
+    // Save the updated bestsellingProducts to localStorage
+    localStorage.setItem('bestsellingProducts', JSON.stringify(updatedbestsellingProducts));
 
     // Show success message
     const messageDiv = document.getElementById('message');
