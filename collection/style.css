@@ -47,7 +47,7 @@
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px; /* Reduced gap between cards */
+    grid-gap: 5px; /* Reduced gap between cards */
 }
 
 .product-card {
@@ -58,11 +58,11 @@
 }
 
 .product-card:first-child {
-    margin-left: 60px; /* Increase left margin for the first card */
+    margin-left: 100px; /* Increase left margin for the first card */
 }
 
 .product-card:last-child {
-    margin-right: 60px; /* Increase right margin for the last card */
+    margin-right: 100px; /* Increase right margin for the last card */
 }
 
 .product-card img {
