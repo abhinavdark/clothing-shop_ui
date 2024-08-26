@@ -2,10 +2,10 @@
 const products = [
     {
         "id": "prod1",
-        "name": "Stylish Dress",
-        "price": "49.99",
-        "image": "https://via.placeholder.com/250",
-        "link": "https://example.com/product1"
+        "name": "Men's Mûr d'Été Shirt",
+        "price": "84.91",
+        "image": "/assets/img/summer-sale.jpg",
+        "link": "https://checkout.couturearangam.shop/mens-mur-dete-shirt"
     },
     {
         "id": "prod2",
