@@ -34,9 +34,10 @@ async function addProduct(event) {
 
     // Render the updated product list
     renderProductTable();
+    renderProductsOnMainPage(); // Update the main page as well
 }
 
-// Function to render the product table
+// Function to render the product table in the admin panel
 function renderProductTable() {
     const productTable = document.getElementById('product-table');
     const tableBody = productTable.getElementsByTagName('tbody')[0];
@@ -89,6 +90,46 @@ function renderProductTable() {
     });
 }
 
+// Function to render products on the main page
+function renderProductsOnMainPage() {
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = ''; // Clear existing products
+
+    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+
+    storedProducts.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card'; // Add the product-card class
+
+        const img = document.createElement('img');
+        img.src = product.image;
+        img.alt = product.name;
+
+        const cardContent = document.createElement('div');
+        cardContent.className = 'product-card-content'; // Add the product-card-content class
+
+        const name = document.createElement('h3');
+        name.textContent = product.name;
+
+        const price = document.createElement('p');
+        price.textContent = `$${product.price}`;
+
+        const link = document.createElement('a');
+        link.href = product.link; // Set the link
+        link.textContent = "View Product"; // Link text
+        link.target = "_blank"; // Open link in a new tab
+
+        cardContent.appendChild(name);
+        cardContent.appendChild(price);
+        cardContent.appendChild(link);
+
+        card.appendChild(img);
+        card.appendChild(cardContent);
+
+        productGrid.appendChild(card);
+    });
+}
+
 // Function to edit a product
 function editProduct(product) {
     // Get the form inputs
@@ -137,6 +178,7 @@ function editProduct(product) {
 
         // Render the updated product table
         renderProductTable();
+        renderProductsOnMainPage(); // Update the main page as well
     }
 }
 
@@ -157,6 +199,7 @@ function deleteProduct(productId) {
 
     // Render the updated product table
     renderProductTable();
+    renderProductsOnMainPage(); // Update the main page as well
 }
 
 // Add event listener for the form submission
@@ -170,3 +213,4 @@ if (storedProducts) {
 
 // Render the initial product table
 renderProductTable();
+renderProductsOnMainPage(); // Render products on the main page
