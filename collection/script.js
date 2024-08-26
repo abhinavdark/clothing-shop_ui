@@ -4,7 +4,7 @@ const products = [
         "id": "prod1",
         "name": "Men's Mûr d'Été Shirt",
         "price": "84.91",
-        "image": "/assets/img/summer-sale.jpg",
+        "image": "https://couturearangam.shop/assets/img/summer-sale.png",
         "link": "https://checkout.couturearangam.shop/mens-mur-dete-shirt"
     },
     {
