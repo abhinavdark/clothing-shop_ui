@@ -1,4 +1,3 @@
-
 // Initialize an empty array for products
 let products = [];
 
@@ -160,6 +159,13 @@ function deleteProduct(productId) {
     renderProductTable();
 }
 
+// Function to clear local storage
+function clearLocalStorage() {
+    localStorage.clear(); // Clear all local storage
+    const messageDiv = document.getElementById('message');
+    messageDiv.textContent = "Local storage cleared successfully!";
+}
+
 // Add event listener for the form submission
 document.getElementById('product-form').addEventListener('submit', addProduct);
 
@@ -171,3 +177,6 @@ if (storedProducts) {
 
 // Render the initial product table
 renderProductTable();
+
+// Add event listener for clearing local storage
+document.getElementById('clear-storage-button').addEventListener('click', clearLocalStorage);
