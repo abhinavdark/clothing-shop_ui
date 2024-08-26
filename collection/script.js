@@ -2,10 +2,11 @@
 async function loadProducts() {
     const response = await fetch('/api/products');
     const products = await response.json();
-    renderProductTable(products);
+    renderProductTable(products); // Render in table format for admin
+    renderProductsAsCards(products); // Render in card format for the main page
 }
 
-// Function to render the product table
+// Function to render the product table in the admin panel
 function renderProductTable(products) {
     const productTable = document.getElementById('product-table');
     const tableBody = productTable.getElementsByTagName('tbody')[0];
@@ -53,6 +54,44 @@ function renderProductTable(products) {
         row.appendChild(actionsCell);
 
         tableBody.appendChild(row);
+    });
+}
+
+// Function to render products as cards on the main page
+function renderProductsAsCards(products) {
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = ''; // Clear existing products
+
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card'; // Add the product-card class
+
+        const img = document.createElement('img');
+        img.src = product.image;
+        img.alt = product.name;
+
+        const cardContent = document.createElement('div');
+        cardContent.className = 'product-card-content'; // Add the product-card-content class
+
+        const name = document.createElement('h3');
+        name.textContent = product.name;
+
+        const price = document.createElement('p');
+        price.textContent = `$${product.price}`;
+
+        const link = document.createElement('a');
+        link.href = product.link; // Set the link
+        link.textContent = "View Product"; // Link text
+        link.target = "_blank"; // Open link in a new tab
+
+        cardContent.appendChild(name);
+        cardContent.appendChild(price);
+        cardContent.appendChild(link);
+
+        card.appendChild(img);
+        card.appendChild(cardContent);
+
+        productGrid.appendChild(card);
     });
 }
 
