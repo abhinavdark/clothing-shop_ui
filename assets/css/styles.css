@@ -71,7 +71,53 @@
     --smaller-font-size: .813rem;
   }
 }
+/* Highlight Section Styles */
+.highlights {
+    padding: 4rem 0; /* Add padding for top and bottom */
+    background-color: #f9f9f9; /* Optional: Light background color */
+}
 
+.highlights__container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 2rem; /* Increase gap between items */
+}
+
+.highlights__grid {
+    display: flex; /* Use flexbox for grid layout */
+    justify-content: space-between; /* Distribute space evenly */
+    width: 100%; /* Full width of the container */
+}
+
+.highlight {
+    flex: 1; /* Allow items to grow and fill space equally */
+    max-width: 300px; /* Set a max width for each highlight */
+    text-align: center; /* Center the text */
+    padding: 1.5rem; /* Add padding for inner spacing */
+    border-radius: 8px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.highlight:hover {
+    transform: scale(1.05); /* Slightly scale up the highlight on hover */
+}
+
+.highlight__icon {
+    font-size: 3rem; /* Increase icon size */
+    margin-bottom: 1rem; /* Space between icon and title */
+}
+
+.highlight__title {
+    font-size: 1.8rem; /* Increase font size for the title */
+    margin: 0.5rem 0; /* Space around the title */
+}
+
+.highlight__description {
+    font-size: 1.2rem; /* Font size for the description */
+    margin: 0; /* Remove margin */
+    color: #555; /* Optional: Darker color for the description text */
+}
 /* Featured Categories Section */
 .featured-categories {
     display: flex; /* Use flexbox for layout */
