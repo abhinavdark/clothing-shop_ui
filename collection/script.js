@@ -1,50 +1,17 @@
-// Initialize an empty array for products
-let products = [];
-
-// Function to add a new product
-async function addProduct(event) {
-    event.preventDefault(); // Prevent form submission
-
-    const nameInput = document.getElementById('product-name');
-    const priceInput = document.getElementById('product-price');
-    const imageInput = document.getElementById('product-image');
-    const linkInput = document.getElementById('product-link'); // New input for link
-
-    const newProduct = {
-        id: `prod${Date.now()}`, // Unique ID based on timestamp
-        name: nameInput.value,
-        price: priceInput.value,
-        image: imageInput.value,
-        link: linkInput.value // Store the link
-    };
-
-    // Add the new product to the products array
-    products.push(newProduct);
-    localStorage.setItem('products', JSON.stringify(products));
-
-    // Show success message
-    const messageDiv = document.getElementById('message');
-    messageDiv.textContent = `Product "${newProduct.name}" added successfully!`;
-
-    // Clear input fields
-    nameInput.value = '';
-    priceInput.value = '';
-    imageInput.value = '';
-    linkInput.value = ''; // Clear the link input
-
-    // Render the updated product list
-    renderProductTable();
+// Function to load products from the server and render them
+async function loadProducts() {
+    const response = await fetch('/api/products');
+    const products = await response.json();
+    renderProductTable(products);
 }
 
 // Function to render the product table
-function renderProductTable() {
+function renderProductTable(products) {
     const productTable = document.getElementById('product-table');
     const tableBody = productTable.getElementsByTagName('tbody')[0];
     tableBody.innerHTML = ''; // Clear existing products
 
-    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
-
-    storedProducts.forEach(product => {
+    products.forEach(product => {
         const row = document.createElement('tr');
 
         const nameCell = document.createElement('td');
@@ -89,94 +56,85 @@ function renderProductTable() {
     });
 }
 
-// Function to edit a product
-function editProduct(product) {
-    // Get the form inputs
+// Function to add a new product
+async function addProduct(event) {
+    event.preventDefault(); // Prevent form submission
+
     const nameInput = document.getElementById('product-name');
     const priceInput = document.getElementById('product-price');
     const imageInput = document.getElementById('product-image');
     const linkInput = document.getElementById('product-link'); // New input for link
 
+    const newProduct = {
+        name: nameInput.value,
+        price: priceInput.value,
+        image: imageInput.value,
+        link: linkInput.value // Store the link
+    };
+
+    // Send a POST request to add the product
+    await fetch('/api/products', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newProduct)
+    });
+
+    // Clear input fields
+    nameInput.value = '';
+    priceInput.value = '';
+    imageInput.value = '';
+    linkInput.value = ''; // Clear the link input
+
+    // Reload products
+    loadProducts();
+}
+
+// Function to edit a product
+function editProduct(product) {
     // Populate the form with the product data
-    nameInput.value = product.name;
-    priceInput.value = product.price;
-    imageInput.value = product.image;
-    linkInput.value = product.link; // Populate the link input
+    document.getElementById('product-name').value = product.name;
+    document.getElementById('product-price').value = product.price;
+    document.getElementById('product-image').value = product.image;
+    document.getElementById('product-link').value = product.link; // Populate the link input
 
-    // Add an event listener to the form submission
+    // Update the product on form submission
     const form = document.getElementById('product-form');
-    
-    // Remove any existing event listener to avoid stacking
-    form.removeEventListener('submit', handleFormSubmit);
-    
-    form.addEventListener('submit', handleFormSubmit);
-
-    function handleFormSubmit(event) {
+    form.onsubmit = async function(event) {
         event.preventDefault();
+        
+        const updatedProduct = {
+            name: document.getElementById('product-name').value,
+            price: document.getElementById('product-price').value,
+            image: document.getElementById('product-image').value,
+            link: document.getElementById('product-link').value // Update the link
+        };
 
-        // Update the product data
-        product.name = nameInput.value;
-        product.price = priceInput.value;
-        product.image = imageInput.value;
-        product.link = linkInput.value; // Update the link
+        // Send a PUT request to update the product
+        await fetch(`/api/products/${product.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedProduct)
+        });
 
-        // Save the updated products to localStorage
-        const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
-        const updatedProducts = storedProducts.map(p => (p.id === product.id ? product : p));
-        localStorage.setItem('products', JSON.stringify(updatedProducts));
-
-        // Show success message
-        const messageDiv = document.getElementById('message');
-        messageDiv.textContent = `Product "${product.name}" updated successfully!`;
-
-        // Clear the form
-        nameInput.value = '';
-        priceInput.value = '';
-        imageInput.value = '';
-        linkInput.value = ''; // Clear the link input
-
-        // Render the updated product table
-        renderProductTable();
-    }
+        // Reload products
+        loadProducts();
+    };
 }
 
 // Function to delete a product
-function deleteProduct(productId) {
-    // Get the stored products from localStorage
-    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+async function deleteProduct(productId) {
+    // Send a DELETE request to remove the product
+    await fetch(`/api/products/${productId}`, {
+        method: 'DELETE'
+    });
 
-    // Filter out the product to be deleted
-    const updatedProducts = storedProducts.filter(p => p.id !== productId);
-
-    // Save the updated products to localStorage
-    localStorage.setItem('products', JSON.stringify(updatedProducts));
-
-    // Show success message
-    const messageDiv = document.getElementById('message');
-    messageDiv.textContent = `Product deleted successfully!`;
-
-    // Render the updated product table
-    renderProductTable();
+    // Reload products
+    loadProducts();
 }
 
-// Function to clear local storage
-function clearLocalStorage() {
-    localStorage.clear(); // Clear all local storage
-    const messageDiv = document.getElementById('message');
-    messageDiv.textContent = "Local storage cleared successfully!";
-}
-
-// Add event listener for the form submission
-document.getElementById('product-form').addEventListener('submit', addProduct);
-
-// Load initial products from local storage or use an empty array
-const storedProducts = JSON.parse(localStorage.getItem('products'));
-if (storedProducts) {
-    products = storedProducts;
-}
-
-// Render the initial product table
-renderProductTable();
-
-// Add event listener for clearing local storage
-document.getElementById('clear-storage-button').addEventListener('click', clearLocalStorage);
+// Load products on page load
+loadProducts();
