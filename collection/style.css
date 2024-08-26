@@ -51,40 +51,41 @@
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 20px; /* Space between cards */
     padding: 0 50px; /* Increased gap on left and right */
     width: 80%; /* Reduced width */
     margin: 0 auto; /* Center the grid */
 }
 
 .product-card {
-    background-color: #fff;
+    background-color: transparent; /* Remove the white background */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Remove shadow for a cleaner look */
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s;
-    height: 350px; /* Increased height */
+    height: 400px; /* Increased height for the card */
 }
 
 .product-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 .product-card img {
     width: 100%;
-    height: 200px; /* Increased image height */
-    object-fit: cover;
+    height: 250px; /* Increased image height */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
 .product-card h3 {
     font-size: 16px;
-    margin: 10px 0 5px;
+    margin: 10px 0 5px; /* Margin for spacing */
 }
 
 .product-card p {
     font-size: 14px;
     color: #333;
+    margin-bottom: 10px; /* Add margin below the price */
 }
 
 .admin-panel {
