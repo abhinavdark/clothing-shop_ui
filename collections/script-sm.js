@@ -1,11 +1,12 @@
+// Initialize an empty array for bestselling products
+let bestsellingProducts = [];
 
-let products = []; // Initialize an empty array for products
-
+// Function to render products
 function renderProducts() {
     const productGrid = document.getElementById('product-grid');
     productGrid.innerHTML = ''; // Clear existing products
 
-    products.forEach(product => {
+    bestsellingProducts.forEach(product => {
         const card = document.createElement('div');
         card.className = 'product-card';
         
@@ -26,9 +27,30 @@ function renderProducts() {
     });
 }
 
-// Load initial products from local storage or use an empty array
-const storedProducts = JSON.parse(localStorage.getItem('products'));
-if (storedProducts) {
-    products = storedProducts;
+// Load initial bestselling products from local storage or use an empty array
+const storedBestsellingProducts = JSON.parse(localStorage.getItem('bestsellingProducts'));
+if (storedBestsellingProducts) {
+    bestsellingProducts = storedBestsellingProducts;
 }
+
+// Render the bestselling products
 renderProducts();
+
+// Function to add a new bestselling product
+function addBestsellingProduct(name, price, image) {
+    const newProduct = {
+        id: `prod${Date.now()}`, // Unique ID based on timestamp
+        name: name,
+        price: price,
+        image: image
+    };
+
+    // Add the new product to the bestselling products array
+    bestsellingProducts.push(newProduct);
+
+    // Save updated bestselling products to local storage
+    localStorage.setItem('bestsellingProducts', JSON.stringify(bestsellingProducts));
+
+    // Re-render the products
+    renderProducts();
+}
