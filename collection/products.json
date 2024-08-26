@@ -1,1 +1,30 @@
-[]
+[
+    {
+        "id": "prod1",
+        "name": "Stylish Dress",
+        "price": "49.99",
+        "image": "https://via.placeholder.com/250",
+        "link": "https://example.com/product1"
+    },
+    {
+        "id": "prod2",
+        "name": "Casual Shirt",
+        "price": "29.99",
+        "image": "https://via.placeholder.com/250",
+        "link": "https://example.com/product2"
+    },
+    {
+        "id": "prod3",
+        "name": "Leather Jacket",
+        "price": "99.99",
+        "image": "https://via.placeholder.com/250",
+        "link": "https://example.com/product3"
+    },
+    {
+        "id": "prod4",
+        "name": "Running Shoes",
+        "price": "69.99",
+        "image": "https://via.placeholder.com/250",
+        "link": "https://example.com/product4"
+    }
+]
