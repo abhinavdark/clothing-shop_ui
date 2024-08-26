@@ -75,28 +75,22 @@
 /* Featured Categories Section */
 .featured-categories {
     display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack the sections vertically */
-    align-items: center; /* Center the items horizontally */
-    padding: 4rem 0; /* Adjust the padding as needed */
-}
-
-.category-section {
-    display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center the items horizontally */
-    width: 100%; /* Full width of the page */
-    margin-bottom: 4rem; /* Spacing between sections */
+    padding: 2rem 0;
+    text-align: center; /* Center the text */
 }
 
 .category-item {
     position: relative; /* Position relative for absolute positioning of text */
     flex: 1; /* Allow items to grow and fill space equally */
-    margin: 0 1rem; /* Margin between items */
-    max-width: 400px; /* Optional: Set a max width for each item */
+    margin: 0 0.5rem; /* Margin between items */
+    max-width: 500px; /* Optional: Set a max width for each item */
 }
 
 .category-image {
     width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
     transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
@@ -107,24 +101,18 @@
     transform: translate(-50%, -50%); /* Adjust position to center */
     color: white; /* White text color */
     text-align: center; /* Center text */
-    width: 80%; /* Limit the width of the text */
 }
 
 /* Increase text size and set color to white */
 .category-text h2 {
     color: white; /* Set the text color to white */
-    font-size: 2rem; /* Adjust the font size for the main heading */
+    font-size: 2.5rem; /* Adjust the font size for the main heading */
     margin: 0; /* Remove margin */
 }
 
 .category-text p {
-    font-size: 1.2rem; /* Increase size of the description */
-    margin: 0.5rem 0 0; /* Add some spacing between heading and description */
-}
-
-/* Hover effect for minimalistic images */
-.category-item:hover .category-image {
-    transform: scale(1.05); /* Slightly scale up the image on hover */
+    font-size: 1.5rem; /* Increase size of the description */
+    margin: 0; /* Remove margin */
 }
 
 /* Next Button */
