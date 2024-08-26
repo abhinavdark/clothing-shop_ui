@@ -39,6 +39,11 @@ function renderProductsAsCards(products) {
         const card = document.createElement('div');
         card.className = 'product-card'; // Add the product-card class
 
+        // Create a link for the entire card
+        const link = document.createElement('a');
+        link.href = product.link; // Set the link
+        link.target = "_blank"; // Open link in a new tab
+
         const img = document.createElement('img');
         img.src = product.image;
         img.alt = product.name;
@@ -52,18 +57,18 @@ function renderProductsAsCards(products) {
         const price = document.createElement('p');
         price.textContent = `$${product.price}`;
 
-        const link = document.createElement('a');
-        link.href = product.link; // Set the link
-        link.textContent = "View Product"; // Link text
-        link.target = "_blank"; // Open link in a new tab
-
+        // Append content to the card content
         cardContent.appendChild(name);
         cardContent.appendChild(price);
-        cardContent.appendChild(link);
 
-        card.appendChild(img);
-        card.appendChild(cardContent);
+        // Append the image and content to the link
+        link.appendChild(img);
+        link.appendChild(cardContent);
 
+        // Append the link to the card
+        card.appendChild(link);
+
+        // Append the card to the grid
         productGrid.appendChild(card);
     });
 }
