@@ -58,11 +58,11 @@
 }
 
 .product-card:first-child {
-    margin-left: 0px; /* Increase left margin for the first card */
+    margin-left: 60px; /* Increase left margin for the first card */
 }
 
 .product-card:last-child {
-    margin-right: 0px; /* Increase right margin for the last card */
+    margin-right: 60px; /* Increase right margin for the last card */
 }
 
 .product-card img {
