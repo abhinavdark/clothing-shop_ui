@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg'); /* Replace with your hero image URL */
+    background-image: url('https://img.freepik.com/free-photo/grey-paint-texture-with-pattern_23-2148402350.jpg?t=st=1724645783~exp=1724649383~hmac=e85baae20f172350680a461c20e2eae27d946f650fa95aa8a3c02b3d6b6325bd&w=1380'); /* Replace with your hero image URL */
     background-size: cover;
     background-position: center;
     height: 300px; /* Reduced height */
