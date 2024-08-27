@@ -136,6 +136,19 @@ html, body {
     background-color: lightgray; /* Example background color */
     height: auto; /* Allow height to adjust based on content */
 }
+/* Mobile styles */
+@media (max-width: 768px) {
+    #background-video {
+        width: 100%; /* Adjust width to fit the screen */
+        height: 100%; /* Adjust height to fit the screen */
+    }
+
+    #video-image {
+        display: block; /* Show the image on mobile */
+        width: 100%; /* Adjust width to fit the screen */
+        height: 100%; /* Adjust height to fit the screen */
+    }
+}
 
 
 /* Highlight Section Styles */
