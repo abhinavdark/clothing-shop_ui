@@ -71,41 +71,73 @@
     --smaller-font-size: .813rem;
   }
 }
- <script>
-        // Function to detect connection type and load the appropriate video
-        function loadVideoSources() {
-            const videoElement = document.getElementById('background-video');
-            
-            // Check if the connection API is available
-            if (navigator.connection) {
-                const connectionType = navigator.connection.effectiveType;
+ /* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto; /* Allow body height to adjust based on content */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
-                // Load .mp4 for good connection and .mov for slower connections
-                if (connectionType === '4g' || connectionType === '3g') {
-                    // Good connection, load .mp4
-                    videoElement.innerHTML = `
-                        <source src="assets/main.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    `;
-                } else {
-                    // Slow connection, load .mov
-                    videoElement.innerHTML = `
-                        <source src="assets/main.mov" type="video/quicktime">
-                        Your browser does not support the video tag.
-                    `;
-                }
-            } else {
-                // Fallback to .mp4 if connection API is not available
-                videoElement.innerHTML = `
-                    <source src="assets/main.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                `;
-            }
-        }
+/* Hero section styling */
+.hero-bg-media {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Keep overflow hidden for the video */
+}
 
-        // Load video sources when the page is loaded
-        window.addEventListener('load', loadVideoSources);
-    </script>
+/* Video styling */
+#background-video {
+    position: absolute;
+    top: 0; /* Move the video to the top edge */
+    left: 50%;
+    width: 100%; /* Adjust width to fit the screen */
+    height: 100%; /* Adjust height to fit the screen */
+    z-index: -1; /* Ensure video is behind text */
+    transform: translateX(-50%); /* Center the video horizontally */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire screen */
+}
+
+/* Image styling */
+#video-image {
+    display: none; /* Hide the image by default */
+    position: absolute;
+    top: 0; /* Align image to the top */
+    left: 50%;
+    width: 100%; /* Adjust width to fit the screen */
+    height: 100%; /* Adjust height to fit the screen */
+    z-index: -1; /* Ensure image is behind text */
+    transform: translateX(-50%); /* Center the image horizontally */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire screen */
+}
+
+/* Text overlay styling */
+.text-overlay {
+    position: absolute;
+    bottom: 20px; /* Adjust bottom position as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white; /* Text color */
+    text-align: center;
+    z-index: 1; /* Ensure text is above the video */
+}
+
+/* Collection title styling */
+.collection-title {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 0;
+    cursor: pointer; /* Change cursor to pointer for clickable text */
+}
+
+/* Additional content styling to enable scrolling */
+.example-content {
+    padding: 20px; /* Add padding for content */
+    background-color: lightgray; /* Example background color */
+    height: auto; /* Allow height to adjust based on content */
+}
+
+
 /* Highlight Section Styles */
 .highlights {
     padding: 6rem 0; /* Increase padding for top and bottom */
