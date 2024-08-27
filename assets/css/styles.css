@@ -83,14 +83,14 @@ html, body {
 .hero-bg-media {
     position: relative;
     width: 100%;
-    height: 70vh; /* Increased height to 70% of viewport height */
+    height: 80vh; /* Increased height of the hero section */
     overflow: hidden; /* Keep overflow hidden for the video */
 }
 
 /* Video styling */
 .background-video {
     position: absolute;
-    top: 50%;
+    top: 30%; /* Move the video down to reduce its height */
     left: 50%;
     min-width: 100%;
     min-height: 100%;
@@ -103,9 +103,9 @@ html, body {
 /* Text overlay styling */
 .text-overlay {
     position: absolute;
-    top: 50%; /* Center vertically */
+    bottom: 10px; /* Position at the bottom edge of the video */
     left: 50%;
-    transform: translate(-50%, -50%); /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     color: white; /* Text color */
     text-align: center;
     z-index: 1; /* Ensure text is above the video */
@@ -115,23 +115,7 @@ html, body {
 .collection-title {
     font-size: 24px; /* Adjust font size as needed */
     margin: 0;
-}
-
-/* Collection link styling */
-.collection-link {
-    display: inline-block;
-    margin-top: 10px; /* Space between title and link */
-    padding: 10px 20px; /* Button-like appearance */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    color: black; /* Text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-/* Link hover effect */
-.collection-link:hover {
-    background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+    cursor: pointer; /* Change cursor to pointer for clickable text */
 }
 
 /* Additional content styling to enable scrolling */
@@ -139,6 +123,31 @@ html, body {
     padding: 20px; /* Add padding for content */
     background-color: lightgray; /* Example background color */
     height: auto; /* Allow height to adjust based on content */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hero-bg-media {
+        height: 60vh; /* Adjust height for mobile devices */
+    }
+
+    .background-video {
+        top: 20%; /* Adjust top position for mobile */
+        min-width: 100%;
+        min-height: auto; /* Allow height to adjust */
+        width: auto; /* Maintain aspect ratio */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .collection-title {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-title {
+        font-size: 18px; /* Further reduce font size for smaller screens */
+    }
 }
 /* Highlight Section Styles */
 .highlights {
