@@ -79,19 +79,11 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Reset default margin and padding */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: auto; /* Allow body height to adjust based on content */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
 /* Hero section styling */
 .hero-bg-media {
     position: relative;
     width: 100%;
-    height: 100vh; /* Increase height of the hero section to full viewport height */
+    height: 100vh; /* Full viewport height */
     overflow: hidden; /* Keep overflow hidden for the video */
 }
 
@@ -134,12 +126,13 @@ html, body {
 /* Mobile styles */
 @media (max-width: 768px) {
     .hero-bg-media {
-        height: 80vh; /* Adjust height for mobile devices */
+        height: 100vh; /* Full viewport height for mobile */
     }
 
     .background-video {
         width: 150%; /* Increase the width of the video for mobile */
         height: 150%; /* Increase the height of the video for mobile */
+        top: -10%; /* Move the video up to remove the white space */
     }
 
     .collection-title {
