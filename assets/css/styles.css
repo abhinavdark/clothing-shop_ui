@@ -71,12 +71,20 @@
     --smaller-font-size: .813rem;
   }
 }
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto; /* Allow body height to adjust based on content */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 /* Hero section styling */
 .hero-bg-media {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+    height: 60vh; /* Adjust height as needed (60% of viewport height) */
+    overflow: hidden; /* Keep overflow hidden for the video */
 }
 
 /* Video styling */
@@ -89,15 +97,15 @@
     width: auto;
     height: auto;
     z-index: -1; /* Ensure video is behind text */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Center the video */
 }
 
 /* Text overlay styling */
 .text-overlay {
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
+    top: 50%; /* Center vertically */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%); /* Center horizontally */
     color: white; /* Text color */
     text-align: center;
     z-index: 1; /* Ensure text is above the video */
@@ -124,6 +132,13 @@
 /* Link hover effect */
 .collection-link:hover {
     background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+}
+
+/* Additional content styling to enable scrolling */
+.example-content {
+    padding: 20px; /* Add padding for content */
+    background-color: lightgray; /* Example background color */
+    height: auto; /* Allow height to adjust based on content */
 }
 /* Highlight Section Styles */
 .highlights {
