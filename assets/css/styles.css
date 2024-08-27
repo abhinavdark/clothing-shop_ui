@@ -83,7 +83,7 @@ html, body {
 .hero-bg-media {
     position: relative;
     width: 100%;
-    height: 60vh; /* Adjust height as needed (60% of viewport height) */
+    height: 70vh; /* Increased height to 70% of viewport height */
     overflow: hidden; /* Keep overflow hidden for the video */
 }
 
