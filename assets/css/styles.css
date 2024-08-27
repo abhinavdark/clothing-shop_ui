@@ -83,14 +83,14 @@ html, body {
 .hero-bg-media {
     position: relative;
     width: 100%;
-    height: 80vh; /* Increased height of the hero section */
+    height: 80vh; /* Height of the hero section */
     overflow: hidden; /* Keep overflow hidden for the video */
 }
 
 /* Video styling */
 .background-video {
     position: absolute;
-    top: 30%; /* Move the video down to reduce its height */
+    top: 10%; /* Move the video up to increase its upper visible size */
     left: 50%;
     min-width: 100%;
     min-height: 100%;
@@ -132,7 +132,7 @@ html, body {
     }
 
     .background-video {
-        top: 20%; /* Adjust top position for mobile */
+        top: 5%; /* Move the video further up for mobile */
         min-width: 100%;
         min-height: auto; /* Allow height to adjust */
         width: auto; /* Maintain aspect ratio */
