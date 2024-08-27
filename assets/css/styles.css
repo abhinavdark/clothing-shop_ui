@@ -71,6 +71,60 @@
     --smaller-font-size: .813rem;
   }
 }
+/* Hero section styling */
+.hero-bg-media {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Video styling */
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Ensure video is behind text */
+    transform: translate(-50%, -50%);
+}
+
+/* Text overlay styling */
+.text-overlay {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Text color */
+    text-align: center;
+    z-index: 1; /* Ensure text is above the video */
+}
+
+/* Collection title styling */
+.collection-title {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 0;
+}
+
+/* Collection link styling */
+.collection-link {
+    display: inline-block;
+    margin-top: 10px; /* Space between title and link */
+    padding: 10px 20px; /* Button-like appearance */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    color: black; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Link hover effect */
+.collection-link:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+}
 /* Highlight Section Styles */
 .highlights {
     padding: 6rem 0; /* Increase padding for top and bottom */
