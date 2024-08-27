@@ -101,18 +101,14 @@
 <!--==================== MAIN ====================-->
     <main class="main">
         <div class="hero-bg-media">
-            <video loop muted autoplay playsinline poster="assets/main.png" class="background-video">
-                <source src="assets/main.mp4" type="video/mp4">
-                <source src="assets/main.webm" type="video/webm">
-                Your browser does not support the video tag.
+            <video id="background-video" loop muted autoplay playsinline poster="assets/main.png">
+                <!-- Video sources will be dynamically added here -->
             </video>
 
             <div class="text-overlay">
                 <h2 class="collection-title" onclick="window.location.href='https://couturearangam.shop/collections/summer-sale';" style="cursor: pointer;">Mûr d'Été collection</h2>
             </div>
         </div>
-
-
       
         
 <!--==================== NEW ARRIVALS AND SUMMER SALE ====================-->
@@ -285,6 +281,41 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+ <script>
+        // Function to detect connection type and load the appropriate video
+        function loadVideoSources() {
+            const videoElement = document.getElementById('background-video');
+            
+            // Check if the connection API is available
+            if (navigator.connection) {
+                const connectionType = navigator.connection.effectiveType;
+
+                // Load .mp4 for good connection and .mov for slower connections
+                if (connectionType === '4g' || connectionType === '3g') {
+                    // Good connection, load .mp4
+                    videoElement.innerHTML = `
+                        <source src="assets/main.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    `;
+                } else {
+                    // Slow connection, load .mov
+                    videoElement.innerHTML = `
+                        <source src="assets/main.mov" type="video/quicktime">
+                        Your browser does not support the video tag.
+                    `;
+                }
+            } else {
+                // Fallback to .mp4 if connection API is not available
+                videoElement.innerHTML = `
+                    <source src="assets/main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                `;
+            }
+        }
+
+        // Load video sources when the page is loaded
+        window.addEventListener('load', loadVideoSources);
+    </script>
 <script>
         // JavaScript to handle the scrolling effect
         window.addEventListener('scroll', function() {
@@ -300,5 +331,6 @@
             }
         });
     </script>
+
 </body>
 </html>
