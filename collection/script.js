@@ -27,6 +27,27 @@ const products = [
         "price": "87.18",
         "image": "https://images-api.printify.com/mockup/66ccaa24df56894d3d06edab/45055/1286/ete-kadal_1724689327596.jpg?camera_label=front&s=400",
         "link": "https://checkout.couturearangam.shop/ete-kadal"
+    },
+     {
+        "id": "prod5",
+        "name": "Jallikatté Men's Denim Jacket",
+        "price": "79.83",
+        "image": "https://images-api.printify.com/mockup/66d0ad65223c8d766e021f6d/73380/19274/sungoudage-cop-tee_1724952254031.jpg?camera_label=on-person-front&s=400",
+        "link": "https://checkout.couturearangam.shop/jallikatte-men-denim-jacket"
+    },
+     {
+        "id": "prod6",
+        "name": "Madrasia checked Women's Skirt",
+        "price": "49.83",
+        "image": "https://images-api.printify.com/mockup/66c16d7cba3fd9e1d9037d2c/43205/699/madrasia-checked-womens-skirt_1723953946533.jpg?camera_label=front&s=400",
+        "link": "https://checkout.couturearangam.shop/madrasia-checked-womens-skirt"
+    },
+    {
+        "id": "prod7",
+        "name": "Sungoudage corp tee",
+        "price": "59.83",
+        "image": "https://images-api.printify.com/mockup/66d0ad65223c8d766e021f6d/73380/19274/sungoudage-cop-tee_1724952254031.jpg?camera_label=on-person-front&s=400",
+        "link": "https://checkout.couturearangam.shop/Sungoudage-corp-tee"
     }
 ];
 
