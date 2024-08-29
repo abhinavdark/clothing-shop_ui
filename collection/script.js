@@ -32,7 +32,7 @@ const products = [
         "id": "prod5",
         "name": "Jallikatté Men's Denim Jacket",
         "price": "79.83",
-        "image": "https://images-api.printify.com/mockup/66d0ad65223c8d766e021f6d/73380/19274/sungoudage-cop-tee_1724952254031.jpg?camera_label=on-person-front&s=400",
+        "image": "https://images-api.printify.com/mockup/66d0b386c72614533e04066c/104695/101894/jallikatte-mens-denim-jacket_1724953555344.jpg?camera_label=person-front&s=400",
         "link": "https://checkout.couturearangam.shop/jallikatte-men-denim-jacket"
     },
      {
