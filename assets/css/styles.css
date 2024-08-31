@@ -40,9 +40,10 @@
     color: white; /* Icon color */
     text-decoration: none; /* Remove underline */
     background-color: rgba(0, 123, 255, 0.7); /* Semi-transparent background color */
-    padding: 10px; /* Padding */
+    padding: 10px 15px; /* Padding */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition */
+    border: none; /* Remove border */
 }
 
 .learn-more:hover {
