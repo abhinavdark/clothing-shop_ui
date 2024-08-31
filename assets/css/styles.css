@@ -10,7 +10,7 @@
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating the image */
-    height: 500px; /* Increased height for the background */
+    height: 600px; /* Increased height for the background */
     padding: 60px; /* Padding for the background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
@@ -39,12 +39,13 @@
     align-items: center; /* Center icon vertically */
     color: white; /* Icon color */
     text-decoration: none; /* Remove underline */
-    background-color: rgba(0, 123, 255, 0.7); /* Semi-transparent background color */
+    background-color: transparent; /* Transparent background color */
     padding: 10px 15px; /* Padding */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition */
     border: none; /* Remove border */
 }
+
 
 .learn-more:hover {
     background-color: rgba(0, 123, 255, 0.9); /* Darker shade on hover */
