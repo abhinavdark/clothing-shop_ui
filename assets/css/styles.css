@@ -16,8 +16,7 @@
 
 .learn-more .icon {
     margin-left: 5px; /* Space between text and icon */
-}/* About Section */
-/* About Section */
+}//* About Section */
 .about-section {
     position: relative; /* Position for background */
     padding: 40px 20px; /* Padding */
@@ -32,8 +31,8 @@
     padding: 60px; /* Padding for the background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    height: 400px; /* Set a fixed height for the background */
 }
+
 .about-content {
     background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
     padding: 30px; /* Padding for content */
@@ -41,12 +40,36 @@
     max-width: 800px; /* Max width for content */
     margin: 0 auto; /* Center content */
     color: #333; /* Dark text color */
+    position: relative; /* Position for child elements */
 }
 
 .about-content h2 {
     margin-top: 0; /* Remove default margin */
 }
 
+/* Button Styles */
+.learn-more {
+    position: absolute; /* Position the button absolutely */
+    bottom: 20px; /* Position from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    display: inline-flex; /* Flexbox for alignment */
+    align-items: center; /* Center icon vertically */
+    color: white; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    background-color: rgba(0, 123, 255, 0.7); /* Semi-transparent background color */
+    padding: 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.learn-more:hover {
+    background-color: rgba(0, 123, 255, 0.9); /* Darker shade on hover */
+}
+
+.learn-more .icon {
+    margin-left: 5px; /* Space between text and icon */
+}
 /* Testimonials Section */
 .testimonials-section {
     padding: 40px 20px; /* Padding */
