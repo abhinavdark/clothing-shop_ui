@@ -95,23 +95,43 @@ function renderProductsAsCards(products) {
 }
 
 // Load products when the page loads
-renderProductsAsCards(products);
+document.addEventListener('DOMContentLoaded', () => {
+    renderProductsAsCards(products);
+});
 
 // Scroll functionality
 const productGrid = document.getElementById('product-grid');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
+let currentIndex = 0; // Track the current product index
+
+function updateButtons() {
+    prevBtn.disabled = currentIndex === 0; // Disable previous button if at the start
+    nextBtn.disabled = currentIndex >= products.length - 1; // Disable next button if at the end
+}
+
 prevBtn.addEventListener('click', () => {
-    productGrid.scrollBy({
-        left: -productGrid.offsetWidth,
-        behavior: 'smooth'
-    });
+    if (currentIndex > 0) {
+        currentIndex--; // Move to the previous product
+        productGrid.scrollBy({
+            left: -productGrid.offsetWidth / products.length, // Scroll left by one product's width
+            behavior: 'smooth'
+        });
+        updateButtons(); // Update button states
+    }
 });
 
 nextBtn.addEventListener('click', () => {
-    productGrid.scrollBy({
-        left: productGrid.offsetWidth,
-        behavior: 'smooth'
-    });
+    if (currentIndex < products.length - 1) {
+        currentIndex++; // Move to the next product
+        productGrid.scrollBy({
+            left: productGrid.offsetWidth / products.length, // Scroll right by one product's width
+            behavior: 'smooth'
+        });
+        updateButtons(); // Update button states
+    }
 });
+
+// Initialize button states
+updateButtons();
