@@ -1,22 +1,4 @@
-.learn-more {
-    display: inline-flex; /* Flexbox for alignment */
-    align-items: center; /* Center icon vertically */
-    margin-top: 20px; /* Margin for spacing */
-    color: white; /* Icon color */
-    text-decoration: none; /* Remove underline */
-    background-color: #007bff; /* Background color */
-    padding: 10px; /* Padding */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
-}
-
-.learn-more:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-.learn-more .icon {
-    margin-left: 5px; /* Space between text and icon */
-}//* About Section */
+/* About Section */
 .about-section {
     position: relative; /* Position for background */
     padding: 40px 20px; /* Padding */
