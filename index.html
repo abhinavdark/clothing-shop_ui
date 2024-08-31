@@ -110,11 +110,22 @@
             </div>
         </div>
 
-          <section class="product-catalog">
-    <div class="product-grid" id="product-grid">
-        <!-- Product cards will be dynamically inserted here -->
+      <div class="carousel-container">
+        <scroll-carousel>
+            <reveal-items>
+                <product-list id="product-grid" class="product-grid"></product-list>
+            </reveal-items>
+        </scroll-carousel>
+        <button id="prev-btn" is="prev-button" class="circle-button circle-button--lg circle-button--fill border group" aria-controls="scroll-area-template--22905225773392__featured_collection_3Df3LR" disabled>
+            <span class="sr-only">Previous</span>
+            <span class="animated-arrow animated-arrow--reverse"></span>
+        </button>
+
+        <button id="next-btn" is="next-button" class="circle-button circle-button--lg circle-button--fill border group" aria-controls="scroll-area-template--22905225773392__featured_collection_3Df3LR">
+            <span class="sr-only">Next</span>
+            <span class="animated-arrow"></span>
+        </button>
     </div>
-</section>
         
 <!--==================== NEW ARRIVALS AND SUMMER SALE ====================-->
 <section class="featured-categories section">
