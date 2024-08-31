@@ -28,14 +28,14 @@ const products = [
         "image": "https://images-api.printify.com/mockup/66ccaa24df56894d3d06edab/45055/1286/ete-kadal_1724689327596.jpg?camera_label=front&s=400",
         "link": "https://checkout.couturearangam.shop/ete-kadal"
     },
-     {
+    {
         "id": "prod5",
         "name": "Jallikatté Men's Denim Jacket",
         "price": "79.83",
         "image": "https://images-api.printify.com/mockup/66d0b386c72614533e04066c/104695/101894/jallikatte-mens-denim-jacket_1724953555344.jpg?camera_label=person-front&s=400",
         "link": "https://checkout.couturearangam.shop/jallikatte-men-denim-jacket"
     },
-     {
+    {
         "id": "prod6",
         "name": "Madrasia checked Women's Skirt",
         "price": "49.83",
@@ -96,3 +96,22 @@ function renderProductsAsCards(products) {
 
 // Load products when the page loads
 renderProductsAsCards(products);
+
+// Scroll functionality
+const productGrid = document.getElementById('product-grid');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+prevBtn.addEventListener('click', () => {
+    productGrid.scrollBy({
+        left: -productGrid.offsetWidth,
+        behavior: 'smooth'
+    });
+});
+
+nextBtn.addEventListener('click', () => {
+    productGrid.scrollBy({
+        left: productGrid.offsetWidth,
+        behavior: 'smooth'
+    });
+});
