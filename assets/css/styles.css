@@ -10,10 +10,14 @@
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating the image */
-    height: 600px; /* Increased height for the background */
+    height: 500px; /* Increased height for the background */
     padding: 60px; /* Padding for the background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
 }
 
 .about-content {
@@ -21,11 +25,10 @@
     padding: 30px; /* Padding for content */
     border-radius: 10px; /* Rounded corners */
     max-width: 800px; /* Max width for content */
-    margin: 0 auto; /* Center content */
     color: #333; /* Dark text color */
 }
 
-.about-content h2 {
+..about-content h2 {
     margin-top: 0; /* Remove default margin */
 }
 
@@ -46,13 +49,9 @@
     border: none; /* Remove border */
 }
 
-
+/* Optional: Hover Effect */
 .learn-more:hover {
-    background-color: rgba(0, 123, 255, 0.9); /* Darker shade on hover */
-}
-
-.learn-more .icon {
-    margin-left: 5px; /* Space between text and icon */
+    background-color: rgba(255, 255, 255, 0.2); /* Light semi-transparent background on hover */
 }
 /* Testimonials Section */
 .testimonials-section {
