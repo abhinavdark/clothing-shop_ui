@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couture Arangam - Collections</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Couture Arangam.
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link active-link">
+                            <i class="ri-home-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>New</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="https://checkout.couturearangam.shop/" class="nav__link">
+                            <i class="ri-compass-line"></i>
+                            <span>Collection</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="https://couturearangam.shop/about" class="nav__link">
+                            <i class="ri-t-shirt-line"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+                     <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+        </nav>
+<section>
+            <ul class="links-container">
+                <li class="link-item"><a href="https://couturearangam.shop/collection/women/" class="link">women</a></li>
+                <li class="link-item"><a href="https://couturearangam.shop/collection/men/" class="link">men</a></li>
+                <li class="link-item"><a href="https://couturearangam.shop/collection/accessories" class="link">accessories</a></li>
+            </ul>
+        </section>
+    </header>
+ 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FALL SALE</h1>
+        </div>
+    </section>
+
+
+    <main>
+        
+
+        <section class="product-catalog">
+        <div class="product-grid" id="product-grid">
+            <!-- Product cards will be dynamically inserted here -->
+        </div>
+    </section>
+    </main>
+
+   <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div>
+                <a href="#" class="footer__logo">
+                    Couturearangam.
+                </a>
+                
+                <p class="footer__description">
+                    Committed to bringing you the <br> 
+                    best high-quality clothing and accessories <br>
+                    from popular Indian brands.
+                </p>
+            </div>
+
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">
+                        Company
+                    </h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Category</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Contact info</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">
+                        Blog
+                    </h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Events</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Popular news</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Recent news</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">
+                        Office Hours
+                    </h3>
+
+                    <p class="footer__information">
+                        Monday - Saturday <br>
+                        9AM - 10PM
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">
+                        Connect with Us
+                    </h3>
+
+                    <ul class="footer__social">
+                        <a href="https://www.facebook.com/profile.php?id=61564366414536" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/couturearangam" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+911234567890&text=Hello, more information!" target="_blank" class="footer__social-link">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__info container">
+            <span class="footer__copy">
+                &#169; 2023 Couturearangam. All rights reserved.
+            </span>
+
+            <a href="#" class="footer__privacy">
+                Terms & Conditions
+            </a>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+        
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+ <script type="module" src="script-sm.js"></script>
+    <script src="assets/js/main.js"></script>
+<script>
+        // JavaScript to handle the scrolling effect
+        window.addEventListener('scroll', function() {
+            const promoBar = document.querySelector('.promo-bar');
+            if (window.scrollY > 50) { // Adjust this value to control when the bar minimizes
+                promoBar.style.padding = '2px 0'; // Reduce padding
+                promoBar.style.height = '5px'; // Set height to make it a line
+                promoBar.style.fontSize = '0'; // Hide text
+            } else {
+                promoBar.style.padding = '10px 0'; // Reset padding
+                promoBar.style.height = 'auto'; // Reset height
+                promoBar.style.fontSize = '16px'; // Reset font size
+            }
+        });
+    </script>
+</body>
+</html>
