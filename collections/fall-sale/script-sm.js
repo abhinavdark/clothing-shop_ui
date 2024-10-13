@@ -28,6 +28,55 @@ const products = [
         "price": "87.18",
         "image": "https://images-api.printify.com/mockup/66ccaa24df56894d3d06edab/45055/1286/ete-kadal_1724689327596.jpg?camera_label=front&s=400",
         "link": "https://checkout.couturearangam.shop/ete-kadal"
+    },
+   {
+        "id": "prod5",
+        "name": "Women’s Puffer Jacket",
+        "price": "86.72",
+        "image": "https://images-api.printify.com/mockup/670a2636f6d553e2590e3dba/103811/101692/womens-puffer-jacket.jpg?camera_label=front&revision=1728730404900&s=2048",
+        "link": "https://checkout.couturearangam.shop/women-puffer-jacket"
+    },
+    {
+        "id": "prod6",
+        "name": "Men's Puffer Jacket",
+        "price": "98.97",
+        "image": "https://images-api.printify.com/mockup/670a24ae402087af9d0906f5/77835/36537/mens-puffer-jacket.jpg?camera_label=front&revision=1728730405119&s=2048",
+        "link": "https://checkout.couturearangam.shop/men-puffer-jacket"
+    },
+ {
+        "id": "prod7",
+        "name": "Sweatshirt",
+        "price": "58.55",
+        "image": "https://images-api.printify.com/mockup/670a484c402087af9d091138/63222/4700/unisex-sweatshirt.jpg?camera_label=front&revision=1728730405720&s=2048",
+        "link": "https://checkout.couturearangam.shop/sweatshirt-agif"
+    },
+ {
+        "id": "prod8",
+        "name": "Checked Men's Shirt",
+        "price": "57.50",
+        "image": "https://images-api.printify.com/mockup/670a4ea441cbbfc3330ac293/95124/78995/checked-mens-shirt-fall-clothing-best-quality.jpg?camera_label=front&revision=1728728903876&s=2048",
+        "link": "https://checkout.couturearangam.shop/shirt-checked"
+    },
+{
+        "id": "prod9",
+        "name": "Athletic Joggers",
+        "price": "45.50",
+        "image": "https://images-api.printify.com/mockup/670a513a75c39463080f14b2/72928/16656/athletic-joggers.jpg?camera_label=front&revision=1728730405365&s=2048",
+        "link": "https://checkout.couturearangam.shop/aj-black"
+    },
+{
+        "id": "prod10",
+        "name": "Athletic Joggers",
+        "price": "45.50",
+        "image": "https://images-api.printify.com/mockup/670a51f5c8b552be600eb557/72928/16656/athletic-joggers-soft-and-stylish-comfort-pants.jpg?camera_label=front&revision=1728729647382&s=2048",
+        "link": "https://checkout.couturearangam.shop/aj-white"
+    },
+{
+        "id": "prod11",
+        "name": "Men's Classic Sneakers",
+        "price": "67.72",
+        "image": "https://images-api.printify.com/mockup/670a53e60acfb4c82b09fcde/44250/80949/mens-classic-sneakers.jpg?camera_label=both-angle&revision=1728730405624&s=2048",
+        "link": "https://checkout.couturearangam.shop/mens-classic-sneakers-camel-s"
     }
 ];
 
