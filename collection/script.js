@@ -1,6 +1,6 @@
 // Sample JSON data for demonstration
 const products = [
-    {
+     {
         "id": "prod1",
         "name": "Men's Mûr d'Été Shirt",
         "price": "84.91",
@@ -28,26 +28,54 @@ const products = [
         "image": "https://images-api.printify.com/mockup/66ccaa24df56894d3d06edab/45055/1286/ete-kadal_1724689327596.jpg?camera_label=front&s=400",
         "link": "https://checkout.couturearangam.shop/ete-kadal"
     },
-    {
+   {
         "id": "prod5",
-        "name": "Jallikatté Men's Denim Jacket",
-        "price": "79.83",
-        "image": "https://images-api.printify.com/mockup/66d0b386c72614533e04066c/104695/101894/jallikatte-mens-denim-jacket_1724953555344.jpg?camera_label=person-front&s=400",
-        "link": "https://checkout.couturearangam.shop/jallikatte-men-denim-jacket"
+        "name": "Women’s Puffer Jacket",
+        "price": "86.72",
+        "image": "https://images-api.printify.com/mockup/670a2636f6d553e2590e3dba/103811/101692/womens-puffer-jacket.jpg?camera_label=front&revision=1728730404900&s=2048",
+        "link": "https://checkout.couturearangam.shop/women-puffer-jacket"
     },
     {
         "id": "prod6",
-        "name": "Madrasia checked Women's Skirt",
-        "price": "49.83",
-        "image": "https://images-api.printify.com/mockup/66c16d7cba3fd9e1d9037d2c/43205/699/madrasia-checked-womens-skirt_1723953946533.jpg?camera_label=front&s=400",
-        "link": "https://checkout.couturearangam.shop/madrasia-checked-womens-skirt"
+        "name": "Men's Puffer Jacket",
+        "price": "98.97",
+        "image": "https://images-api.printify.com/mockup/670a24ae402087af9d0906f5/77835/36537/mens-puffer-jacket.jpg?camera_label=front&revision=1728730405119&s=2048",
+        "link": "https://checkout.couturearangam.shop/men-puffer-jacket"
     },
-    {
+ {
         "id": "prod7",
-        "name": "Sungoudage corp tee",
-        "price": "59.83",
-        "image": "https://images-api.printify.com/mockup/66d0ad65223c8d766e021f6d/73380/19274/sungoudage-cop-tee_1724952254031.jpg?camera_label=on-person-front&s=400",
-        "link": "https://checkout.couturearangam.shop/Sungoudage-corp-tee"
+        "name": "Sweatshirt",
+        "price": "58.55",
+        "image": "https://images-api.printify.com/mockup/670a484c402087af9d091138/63222/4700/unisex-sweatshirt.jpg?camera_label=front&revision=1728730405720&s=2048",
+        "link": "https://checkout.couturearangam.shop/sweatshirt-agif"
+    },
+ {
+        "id": "prod8",
+        "name": "Checked Men's Shirt",
+        "price": "57.50",
+        "image": "https://images-api.printify.com/mockup/670a4ea441cbbfc3330ac293/95124/78995/checked-mens-shirt-fall-clothing-best-quality.jpg?camera_label=front&revision=1728728903876&s=2048",
+        "link": "https://checkout.couturearangam.shop/shirt-checked"
+    },
+{
+        "id": "prod9",
+        "name": "Athletic Joggers",
+        "price": "45.50",
+        "image": "https://images-api.printify.com/mockup/670a513a75c39463080f14b2/72928/16656/athletic-joggers.jpg?camera_label=front&revision=1728730405365&s=2048",
+        "link": "https://checkout.couturearangam.shop/aj-black"
+    },
+{
+        "id": "prod10",
+        "name": "Athletic Joggers",
+        "price": "45.50",
+        "image": "https://images-api.printify.com/mockup/670a51f5c8b552be600eb557/72928/16656/athletic-joggers-soft-and-stylish-comfort-pants.jpg?camera_label=front&revision=1728729647382&s=2048",
+        "link": "https://checkout.couturearangam.shop/aj-white"
+    },
+{
+        "id": "prod11",
+        "name": "Men's Classic Sneakers",
+        "price": "67.72",
+        "image": "https://images-api.printify.com/mockup/670a53e60acfb4c82b09fcde/44250/80949/mens-classic-sneakers.jpg?camera_label=both-angle&revision=1728730405624&s=2048",
+        "link": "https://checkout.couturearangam.shop/mens-classic-sneakers-camel-s"
     }
 ];
 
