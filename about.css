@@ -8,8 +8,9 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    line-height: 1.8;
+    line-height: 2;
     background: #f9f9f9;
+    font-size: 1.2rem;
 }
 
 h1, h2, h3 {
@@ -19,7 +20,7 @@ h1, h2, h3 {
 
 /* ============== HERO SECTION ============== */
 .hero {
-    height: 100vh;
+    height: 120vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('https://images.unsplash.com/photo-1537832816513-83598ad85242') center/cover;
     display: flex;
@@ -30,126 +31,239 @@ h1, h2, h3 {
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 2rem;
+    max-width: 1200px;
+    padding: 4rem;
 }
 
 .hero h1 {
-    font-size: 4.5rem;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
+    font-size: 6rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 /* ============== HERITAGE SECTION ============== */
 .heritage-section {
-    padding: 8rem 2rem;
+    padding: 10rem 4rem;
     background: white;
 }
 
 .heritage-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
     align-items: center;
 }
 
 .heritage-text h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 3rem;
     color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.heritage-text p {
+    font-size: 1.4rem;
+    line-height: 2.2;
 }
 
 .heritage-image img {
     width: 100%;
-    height: 600px;
+    height: 800px;
     object-fit: cover;
-    box-shadow: 20px 20px 0 #e8e5e0;
+    box-shadow: 30px 30px 0 #e8e5e0;
 }
 
 /* ============== CRAFTSMANSHIP SECTION ============== */
 .craftsmanship {
-    padding: 8rem 2rem;
+    padding: 10rem 4rem;
     background: #f5f3ef;
 }
 
 .craft-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
     align-items: center;
 }
 
 .craft-image img {
     width: 100%;
-    height: 700px;
+    height: 900px;
     object-fit: cover;
 }
 
 .craft-text h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 3rem;
     color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.craft-text p {
+    font-size: 1.4rem;
+    line-height: 2.2;
 }
 
 /* ============== SUSTAINABLE LUXURY ============== */
 .sustainable-luxury {
-    padding: 6rem 2rem;
+    padding: 8rem 4rem;
     background: white;
 }
 
 .sustainable-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
 }
 
 .sustainable-content h2 {
-    font-size: 3rem;
-    margin-bottom: 4rem;
+    font-size: 4rem;
+    margin-bottom: 6rem;
+    line-height: 1.2;
 }
 
 .sustainable-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .sustainable-item img {
     width: 100%;
-    height: 300px;
+    height: 500px;
     object-fit: cover;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .sustainable-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.sustainable-item p {
+    font-size: 1.3rem;
 }
 
 /* ============== FOUNDER SECTION ============== */
 .founder-section {
-    padding: 8rem 2rem;
+    padding: 10rem 4rem;
     background: #1a1a1a;
     color: white;
 }
 
 .founder-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
     align-items: center;
 }
 
-.founder
+.founder-image img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+
+.founder-text h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.founder-name {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.founder-text p {
+    font-size: 1.4rem;
+    line-height: 2.2;
+    font-style: italic;
+}
+
+/* ============== FOOTER ============== */
+.luxury-footer {
+    padding: 4rem;
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ============== RESPONSIVE DESIGN ============== */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .hero {
+        height: 100vh;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .heritage-content,
+    .craft-content,
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .heritage-section,
+    .craftsmanship,
+    .founder-section {
+        padding: 6rem 2rem;
+    }
+    
+    .heritage-text h2,
+    .craft-text h2,
+    .founder-text h2,
+    .sustainable-content h2 {
+        font-size: 3rem;
+    }
+    
+    .heritage-image img,
+    .craft-image img,
+    .founder-image img {
+        height: 500px;
+    }
+    
+    .sustainable-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sustainable-item img {
+        height: 400px;
+    }
+    
+    .founder-name {
+        font-size: 1.4rem;
+    }
+}
