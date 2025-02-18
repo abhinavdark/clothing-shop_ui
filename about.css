@@ -1,269 +1,242 @@
-/* ============== BASE STYLES ============== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*=============== BASE ===============*/
+:root {
+    --bg-color: #f5f3ef;
+    --text-color: #333;
+    --title-color: #1a1a1a;
+    --accent-color: #a87c52;
+    --font-body: 'Cormorant Garamond', serif;
+    --font-heading: 'Playfair Display', serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    line-height: 2;
-    background: #f9f9f9;
-    font-size: 3.0rem;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.8;
 }
 
 h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-heading);
+    color: var(--title-color);
     font-weight: 500;
 }
 
-/* ============== HERO SECTION ============== */
-.hero {
-    height: 120vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1537832816513-83598ad85242') center/cover;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*=============== HERO SECTION ===============*/
+.hero-bg-media {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.collection-title {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/*=============== FEATURED CATEGORIES ===============*/
+.featured-categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.category-item {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.category-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-image {
+    transform: scale(1.05);
+}
+
+.category-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.category-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.next-button {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.next-button:hover {
+    color: var(--accent-color);
+}
+
+/*=============== ABOUT SECTION ===============*/
+.about-section {
+    padding: 6rem 0;
+}
+
+.about-background {
+    background-image: url('assets/img/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: white;
+    position: relative;
+}
+
+.about-content {
+    max-width: 800px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.learn-more {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+/*=============== HIGHLIGHTS SECTION ===============*/
+.highlights {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.highlights__grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.highlight {
     text-align: center;
+    max-width: 300px;
 }
 
-.hero-content {
-    max-width: 1200px;
-    padding: 4rem;
+.highlight__icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
 }
 
-.hero h1 {
-    font-size: 8rem;
-    letter-spacing: 5px;
-    margin-bottom: 2rem;
-    line-height: 1.1;
+.highlight__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.hero-subtitle {
-    font-size: 6rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.highlight__description {
+    font-size: 1rem;
+    color: #555;
 }
 
-/* ============== HERITAGE SECTION ============== */
-.heritage-section {
-    padding: 10rem 4rem;
-    background: white;
+/*=============== FOOTER ===============*/
+.footer {
+    background-color: var(--title-color);
+    color: white;
+    padding: 4rem 0;
 }
 
-.heritage-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-}
-
-.heritage-text h2 {
-    font-size: 4rem;
-    margin-bottom: 3rem;
-    color: #1a1a1a;
-    line-height: 1.2;
-}
-
-.heritage-text p {
-    font-size: 1.4rem;
-    line-height: 2.2;
-}
-
-.heritage-image img {
-    width: 100%;
-    height: 800px;
-    object-fit: cover;
-    box-shadow: 30px 30px 0 #e8e5e0;
-}
-
-/* ============== CRAFTSMANSHIP SECTION ============== */
-.craftsmanship {
-    padding: 10rem 4rem;
-    background: #f5f3ef;
-}
-
-.craft-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-}
-
-.craft-image img {
-    width: 100%;
-    height: 900px;
-    object-fit: cover;
-}
-
-.craft-text h2 {
-    font-size: 4rem;
-    margin-bottom: 3rem;
-    color: #1a1a1a;
-    line-height: 1.2;
-}
-
-.craft-text p {
-    font-size: 1.4rem;
-    line-height: 2.2;
-}
-
-/* ============== SUSTAINABLE LUXURY ============== */
-.sustainable-luxury {
-    padding: 8rem 4rem;
-    background: white;
-}
-
-.sustainable-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.sustainable-content h2 {
-    font-size: 4rem;
-    margin-bottom: 6rem;
-    line-height: 1.2;
-}
-
-.sustainable-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-}
-
-.sustainable-item img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    margin-bottom: 2rem;
-}
-
-.sustainable-item h3 {
+.footer__logo {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.sustainable-item p {
-    font-size: 1.3rem;
-}
-
-/* ============== FOUNDER SECTION ============== */
-.founder-section {
-    padding: 10rem 4rem;
-    background: #1a1a1a;
-    color: white;
-}
-
-.founder-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-}
-
-.founder-image img {
-    width: 100%;
-    height: 900px;
-    object-fit: cover;
-}
-
-.founder-text h2 {
-    font-size: 4rem;
+.footer__description {
+    font-size: 1rem;
     margin-bottom: 2rem;
-    line-height: 1.2;
 }
 
-.founder-name {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    margin-bottom: 3rem;
-    opacity: 0.8;
-    font-weight: 500;
+.footer__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
-.founder-text p {
-    font-size: 1.4rem;
-    line-height: 2.2;
-    font-style: italic;
+.footer__links {
+    list-style: none;
+    padding: 0;
 }
 
-/* ============== FOOTER ============== */
-.luxury-footer {
-    padding: 4rem;
-    background: #1a1a1a;
+.footer__link {
+    font-size: 1rem;
     color: white;
+    transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: var(--accent-color);
+}
+
+.footer__social-link {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+    color: var(--accent-color);
+}
+
+.footer__copy {
+    font-size: 0.875rem;
     text-align: center;
-    font-size: 1.2rem;
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-/* ============== RESPONSIVE DESIGN ============== */
-@media (max-width: 768px) {
-    body {
-        font-size: 1rem;
-    }
-    
-    .hero {
-        height: 100vh;
-    }
-    
-    .hero h1 {
-        font-size: 4rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .heritage-content,
-    .craft-content,
-    .founder-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .heritage-section,
-    .craftsmanship,
-    .founder-section {
-        padding: 6rem 2rem;
-    }
-    
-    .heritage-text h2,
-    .craft-text h2,
-    .founder-text h2,
-    .sustainable-content h2 {
-        font-size: 3rem;
-    }
-    
-    .heritage-image img,
-    .craft-image img,
-    .founder-image img {
-        height: 500px;
-    }
-    
-    .sustainable-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .sustainable-item img {
-        height: 400px;
-    }
-    
-    .founder-name {
-        font-size: 1.4rem;
-    }
+    margin-top: 2rem;
 }
